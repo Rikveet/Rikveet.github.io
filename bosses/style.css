@@ -33,7 +33,12 @@ header{
     color:white;
     text-decoration:none;    
 }
-
+#anouncement{
+    margin: auto;
+    font-size: x-large;
+    text-align: center;
+    text-decoration-color: crimson;
+}
 #gallery{  
     display:block;
     margin:auto;
