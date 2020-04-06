@@ -35,7 +35,7 @@ header{
 }
 #anouncement{
     margin: auto;
-    font-size: x-large;
+    text-size-adjust: 2rem;
     text-align: center;
     text-decoration-color: crimson;
 }
