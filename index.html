@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta http-equiv="X-UA-Compatitble" content="ie=edge"/>
+            <title>Narnia</title>
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">   <!--the nav font-->
+            <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet"><!--later font-->
+            <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet"><!--main logo-->
+        </head>
+        <body id="main">
+            <div id="disable1" class="slider"></div>
+            <header>
+                <section>
+                    <div id="disable2" class="home">
+                        <script>
+                            var tras = true;   
+                            check=localStorage.getItem('visited');
+                            if(check==null){
+                                localStorage.setItem('visited',true);
+                            }else{
+                                var tras = false;   
+                                document.getElementById("disable1").style.display = "none";
+                                document.getElementById("disable2").style.display = "none";
+                            } 
+                                      
+                        </script>
+                        <img src="./website/spawn1.png" alt="spawn"/>
+                        <p class="Headline">Welcome‎‎‎‎‏‏‎‎.‎to.Narnia</p>
+                    </div>
+                    <div class="container">
+                        <div class="box">
+                            <a href="https://www.youtube.com/watch?v=PkkkKxHJtoo"><img src="./website/BootyBay2.png"></a><p>Shops</p><!-- bootyBay.html -->
+                            </div>
+                            <div class="box">
+                                <a href="./bosses/"><img src="./website/BossArena.png"></a><p>Bosses</p><!-- Bosses.html -->
+                            </div>
+                            <div class="box">
+                                <a href="https://www.youtube.com/watch?v=xfr64zoBTAQ"><img src="./website/warps.png"></a><p>warps</p><!-- Warps.html -->
+                            </div>
+                            <div class="box">
+                                <a href="https://terminalserver.enjin.com/forum/m/37204534/viewthread/27384744-frequently-asked-questions-by-players-new-old"><img src="./website/Jail.png"></a><p>FAQ</p><!-- Rules.html -->
+                            </div>
+                            <div class="box">
+                                <a href="https://www.google.com/search?q=sid&rlz=1C1CHBF_enCA883CA883&oq=sid&aqs=chrome..69i57j0l4j69i61l3.707j0j4&sourceid=chrome&ie=UTF-8"><img src="./website/Minite.png"></a><p>Featured Builds</p><!-- Featured.html -->
+                            </div>
+                            <div class="box">
+                                <a href="./info/"><img src="./website/Owner.png"></a><p>Info</p><!-- Info.html -->
+                            </div>
+                        </div>
+                </section>
+            </header>
+            <img class="narniaLogo" src="./website/server-icon.png" alt="Plz insert Logo Sid XD"/>
+            <p class="bottom">narniamc.com<br>
+                IP: 66.70.175.31:25566 </p>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha256-v/YsEqWkVsiNHryCWg+vjC/eDBakMAgOsCJRa0kNPOg=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha256-ABrLsV2caVEMCBfm3eNhv/CYQG+tGCqzw2f4b/Pag0M=" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="lol.js"></script>
+        </body>
+    </html>
