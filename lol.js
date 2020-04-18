@@ -116,10 +116,11 @@ if(tras){
         complete();
         return;
     }
-}
+    }
+    
+stateChange();
 }
 
-stateChange();
 
 
 
