@@ -65,6 +65,20 @@ function generate() {
         }
     var gradient =  get();
     document.getElementById("main").style.background = gradient;
+    loadDoc();
 }
 
 document.onload = generate();
+
+
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          console.log(this.responseText);
+       //document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", "this.py", true);
+    xhttp.send();
+  }
