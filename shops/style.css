@@ -12,7 +12,7 @@
     margin-bottom: 10vh;
     /* height:100vh; */
     justify-content: center;
-    background-image: url("BootyBay2.png");
+    background-image: url("BootyBay1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -36,4 +36,5 @@
     min-width: 9vh;
     max-height: 100%;
     max-width: 100%;
+    box-shadow:-2px -2px 3px 5px whitesmoke, 2px 2px 3px 5px whitesmoke;
 }
