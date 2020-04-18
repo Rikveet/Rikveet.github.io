@@ -10,9 +10,30 @@
     margin-left: 10vw;
     margin-right: 10vw;
     margin-bottom: 10vh;
-    height:90vh;
+    /* height:100vh; */
     justify-content: center;
     background-image: url("BootyBay2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     box-shadow:-10px -10px 40px 20px whitesmoke, 10px 10px 40px 20px whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+#advt{
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 24%;
+    width:30%;
+}
+
+#advt a img{
+    min-height: 16vh;
+    min-width: 9vh;
+    max-height: 100%;
+    max-width: 100%;
 }

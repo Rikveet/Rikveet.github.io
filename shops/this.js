@@ -1,4 +1,11 @@
 
+var data = `s 6
+->1 this is 1st shop disc
+    lol
+->2 this is 2st shop disc
+->3 this is 3st shop
+->1 this is 1st shop`
+
 function generate() {
     function get(){
     let gradients=[
@@ -65,20 +72,31 @@ function generate() {
         }
     var gradient =  get();
     document.getElementById("main").style.background = gradient;
-    loadDoc();
-}
+    }
 
 document.onload = generate();
 
+console.log(data);
+dataArr = data.split('\n');
+first = dataArr[0].split(" ");
+images= "";
+for(i=1; i<=first[1];i++){
+    console.log(first[0]+i);
+    images = images+"<div id='advt'><a ><img src='pics/"+first[0]+i+".png'></a></div>";
+}
 
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          console.log(this.responseText);
-       //document.getElementById("demo").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "this.py", true);
-    xhttp.send();
-  }
+document.getElementById("grid").innerHTML = images;
+dataArr.forEach(element => {
+    console.log(element);
+});
+// function loadDoc() {
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function() {
+//       if (this.readyState == 4 && this.status == 200) {
+//           console.log(this.responseText);
+//        //document.getElementById("demo").innerHTML = this.responseText;
+//       }
+//     };
+//     xhttp.open("GET", "this.py", true);
+//     xhttp.send();
+//   }

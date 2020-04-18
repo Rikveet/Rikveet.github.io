@@ -1,0 +1,7 @@
+s 6
+
+->1 this is 1st shop disc
+    lol
+->2 this is 2st shop disc
+->3 this is 3st shop
+->1 this is 1st shop
