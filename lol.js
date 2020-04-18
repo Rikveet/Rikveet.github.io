@@ -121,6 +121,7 @@ if(tras){
 stateChange();
 }
 else{
+
     tl.fromTo(
         container,
         2, {
@@ -142,7 +143,8 @@ else{
         }, {
             bottom: '0%',
             ease: Power2.easeInOut
-        })
+        }
+    )
 }
 
 
