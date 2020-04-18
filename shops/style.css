@@ -10,7 +10,9 @@
     margin-left: 10vw;
     margin-right: 10vw;
     margin-bottom: 10vh;
+    height:90vh;
     justify-content: center;
     background-image: url("BootyBay2.png");
+    background-position: center;
     box-shadow: 10px 10px 40px 20px whitesmoke;
 }
