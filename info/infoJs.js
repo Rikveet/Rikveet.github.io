@@ -122,9 +122,12 @@ function generate() {
             "linear-gradient(#f4dc89,#fcf3d3)",
             "linear-gradient(#d7fffe,#fffeff)",
             "linear-gradient(#c2daee,#7690c1)"];
-            ret = gradients[Math.round(Math.random()*gradients.length)];
-            console.log(ret);
-            return ret;
+            while(true){
+                ret =gradients[Math.round(Math.random()*gradients.length)];
+                if(ret!=undefined){break;}
+                }
+                console.log(ret);
+                return ret;
         }    
         function nav(){
             let gradients=[
@@ -182,9 +185,12 @@ function generate() {
             "linear-gradient(#20A4F3,#182B3A)",
             "linear-gradient(#4D4855,#A399B2)",
             "linear-gradient(#000000,#4D4855)"];
-            ret =gradients[Math.round(Math.random()*gradients.length)];
-            console.log(ret);
-            return ret;
+            while(true){
+                ret =gradients[Math.round(Math.random()*gradients.length)];
+                if(ret!=undefined){break;}
+                }
+                console.log(ret);
+                return ret;
         }
     document.getElementById("1").style.background =  rand();
     document.getElementById("2").style.background =  rand();

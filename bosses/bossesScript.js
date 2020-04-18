@@ -141,7 +141,10 @@ function generate() {
         "linear-gradient(#000000,#923CB5)",
         "linear-gradient(#000000,#E056FD)",
         "linear-gradient(#746CC0,#58427C)"];
+        while(true){
             ret =gradients[Math.round(Math.random()*gradients.length)];
+            if(ret!=undefined){break;}
+            }
             console.log(ret);
             return ret;
         }

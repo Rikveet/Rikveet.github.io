@@ -1,4 +1,5 @@
 
+
 function generate() {
     function get(){
     let gradients=[
@@ -56,14 +57,16 @@ function generate() {
             "linear-gradient(#20A4F3,#182B3A)",
             "linear-gradient(#4D4855,#A399B2)",
             "linear-gradient(#000000,#4D4855)"];
+            while(true){
             ret =gradients[Math.round(Math.random()*gradients.length)];
+            if(ret!=undefined){break;}
+            }
             console.log(ret);
             return ret;
         }
     var gradient =  get();
     document.getElementById("main").style.background = gradient;
 }
-
 document.onload = generate();
 
 const home = document.querySelector('.home');
