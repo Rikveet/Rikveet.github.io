@@ -120,6 +120,30 @@ if(tras){
     
 stateChange();
 }
+else{
+    tl.fromTo(
+        container,
+        2, {
+            top: '0%'
+        }, {
+            top: '0%',
+            ease: Power2.easeOutIn
+        }).fromTo(
+        narniaLogo,
+        2, {
+            bottom: '18%'
+        }, {
+            bottom: '18%',
+            ease: Power2.easeInOut
+        }).fromTo(
+        bottom,
+        1, {
+            bottom: '0%'
+        }, {
+            bottom: '0%',
+            ease: Power2.easeInOut
+        })
+}
 
 
 
