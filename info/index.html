@@ -9,12 +9,17 @@
             <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">   <!--the nav font-->
             <link href="https://fonts.googleapis.com/css?family=Aladin&display=swap" rel="stylesheet"><!--data font heading-->
             <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet"> <!--the data font-->
+            <script>
+                function goBack(){
+                    history.go(-1);
+                }
+            </script>
         </head>
         <body >
             <header id="back">
                 <nav>
                     <ul>
-                         <li><a onclick="<script>history.go(-1);</script>">Home</a></li>
+                         <li><a onclick="goBack()">Home</a></li>
                          <li><a id="s1"  href="#1"> Getting Started</a></li>
                          <li><a id="s2"  href="#2"> Rules</a></li>
                          <li><a id="s3" href="#3">Vote </a></li>
