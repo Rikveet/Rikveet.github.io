@@ -23,8 +23,8 @@
 }
 
 #advt a img{
-    min-height: 20vh;
-    min-width: 13vh;
+    min-height: 200px;
+    min-width: auto;
     max-height: 100%;
     max-width: 100%;
     box-shadow:-2px -2px 4px 5px white, 2px 2px 4px 5px white;
