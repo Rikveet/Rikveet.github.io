@@ -1,2 +1,2 @@
 import glob
-return (glob.glob("/pic/*.png"))
+print (glob.glob("/pic/*.png"))
