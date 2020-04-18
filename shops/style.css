@@ -1,4 +1,15 @@
 #heading{
-    font-size: x-large;
+    color: white;
+    text-align: center;
+    font-size: 10vh;
     justify-content: center;
+}
+
+#grid{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 10vh;
+    justify-content: center;
+    background-image: url("BootyBay2.png");
 }
