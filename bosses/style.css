@@ -9,12 +9,19 @@ body{
     height: fit-content;
     box-shadow:-2px -2px 4px 5px red, 2px 2px 4px 5px red;
 }
+#navbar ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 #navbar ul li{
-    display: inline-flex;
+    display: block;
     font-size: x-large;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 5%;
+    
 }
 #navbar ul li a{
     text-decoration: none;
@@ -23,5 +30,33 @@ body{
 #gallery{
     min-height: 90vh;
     max-height: fit-content;
+    justify-content: space-evenly;
+}
+#advt{
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    justify-content: center;
+    box-shadow:-2px -2px 4px 5px brown, 2px 2px 4px 5px brown;
+}
+
+#advt img{
+    width:50%;
+    object-fit: contain;
+}
+#back{
+    background-color: white;
+    opacity: 0.7;
+    width:50%;
+    align-items: center;
+}
+#content{
+    white-space: pre-wrap;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: large;
+    opacity: 1;
 }
 
