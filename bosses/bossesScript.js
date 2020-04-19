@@ -49,24 +49,6 @@ Cost 5 Dragon Eggs to Summon
 Reward: 
 1 Dragon Head
 Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)
-Reward: 
-1 Dragon Head
-Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)
-Reward: 
-1 Dragon Head
-Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)
-Reward: 
-1 Dragon Head
-Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)
-Reward: 
-1 Dragon Head
-Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)
-Reward: 
-1 Dragon Head
-Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)
-Reward: 
-1 Dragon Head
-Sword of Cinders (Has Fire Aspect 2, Knockback 2, Looting 3, Mending, Sharpness 5, Sweeping Edge 3, Unbreaking 3)s
 
 id:Witch’s Dragon ( Witch on an Ender Dragon) 
 Cost 5 Dragon Eggs to Summon
