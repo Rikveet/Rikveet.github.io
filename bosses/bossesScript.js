@@ -35,7 +35,8 @@ function generate() {
             return ret;
         }
     var gradient =  get();
-     document.querySelector(".main").style.background = gradient;
+     document.getElementById("main").style.background = gradient;
+     document.getElementById("main").style.backgroundRepeat = "no-repeat";
 }
 generate();
 

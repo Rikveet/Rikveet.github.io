@@ -1,3 +1,26 @@
-#navbar{
-    display: inline-block;
+body{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5vh;
 }
+#navbar{
+    position: sticky;
+    background-color: black;
+    height: 10vh;
+    box-shadow:-2px -2px 4px 5px white, 2px 2px 4px 5px white;
+}
+#navbar ul{
+    justify-items: center;
+}
+#navbar ul li{
+    display: inline-block;
+    font-size: x-large;
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+#gallery{
+    min-height: 90vh;
+}
+
