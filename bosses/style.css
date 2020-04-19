@@ -6,15 +6,15 @@ body{
 #navbar{
     position: sticky;
     background-color: black;
-    height: 10vh;
+    height: fit-content;
     box-shadow:-2px -2px 4px 5px red, 2px 2px 4px 5px red;
 }
-#navbar ul{
-    justify-items: center;
-}
 #navbar ul li{
-    display: inline-block;
+    display: inline-flex;
     font-size: x-large;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
 }
 #navbar ul li a{
     text-decoration: none;
@@ -22,5 +22,6 @@ body{
 }
 #gallery{
     min-height: 90vh;
+    max-height: fit-content;
 }
 
