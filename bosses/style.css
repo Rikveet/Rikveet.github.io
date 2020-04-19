@@ -57,6 +57,7 @@ body{
     white-space: pre-wrap;
     padding-left: 10px;
     padding-top: 10px;
+    max-height: 27vh;
     font-size: large;
     overflow: auto;
     opacity: 1;
