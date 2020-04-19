@@ -7,7 +7,7 @@ body{
     position: sticky;
     background-color: black;
     height: 10vh;
-    box-shadow:-2px -2px 4px 5px white, 2px 2px 4px 5px white;
+    box-shadow:-2px -2px 4px 5px red, 2px 2px 4px 5px red;
 }
 #navbar ul{
     justify-items: center;
