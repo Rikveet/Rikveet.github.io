@@ -36,7 +36,7 @@ function generate() {
         }
     var gradient =  get();
      document.getElementById("main").style.background = gradient;
-     document.getElementById("main").style.backgroundRepeat = "no-repeat";
+     
 }
 generate();
 
