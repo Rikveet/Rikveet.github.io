@@ -96,14 +96,20 @@ id:Killer Bunny (Accompanied with more Killer Rabbits)
 Cost 1 Rabbit's Foot to Summon
 Reward: Killer Boots of Caerbannog (Depth Strider 3, Feather Falling 4, Fire Protection 4, Mending, Thorns 3, Unbreaking 3)
 `
+var TierI = `Data pending`;
+var TierII = `Data pending`;
+var TierIII = `Data pending`;
+var TierIV = `Data pending`;
+var TierV = `Data pending`;
 BossArenaDataArr = BossArenaData.split("id:");
 BossArenaImageNames = [];
 BossArenaDataArr.forEach(element => {
     BossArenaImageNames.push(element.split("\n")[0]);
 });
-var images="<div class='grid' id='BossArena'>";
+var images="<div id='BossArena'>";
 for(i=1;i<BossArenaImageNames.length;i++){
     images+="<div id='advt'><img src='./BossArena/"+BossArenaImageNames[i]+".png'><div id='back'><div id='content'>"+BossArenaDataArr[i]+"</div></div></div>";
 }
+images+="<div id='advt'><div id='TierI'>Pending Data</div></div><div id='advt'><div id='TierII'>Pending Data</div></div><div id='advt'><div id='TierIII'>Pending Data</div></div><div id='advt'><div id='TierIV'>Pending Data</div></div><div id='advt'><div id='TierV'>Pending Data</div></div>"
 images+="</div>";
 document.getElementById('gallery').innerHTML=images;

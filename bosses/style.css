@@ -7,14 +7,14 @@ body{
     position: sticky;
     background-color: black;
     height: fit-content;
+    top:0;
     box-shadow:-2px -2px 4px 5px red, 2px 2px 4px 5px red;
+    z-index: 2;
 }
 #navbar ul{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 #navbar ul li{
     display: block;
@@ -28,16 +28,17 @@ body{
     color: white;
 }
 #gallery{
+    margin-top: 15vh;
     min-height: 90vh;
     max-height: fit-content;
     justify-content: space-evenly;
 }
 #advt{
-    display: inline-flex;
+    display: flex;
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     justify-content: center;
     box-shadow:-2px -2px 4px 5px brown, 2px 2px 4px 5px brown;
 }
