@@ -10,6 +10,17 @@
 body {
   background-color: #011627;
 }
+#overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 10vh;
+}
+#overlay img {
+  height: 80vh;
+  width: 60vw;
+  border-radius: 20%;
+  box-shadow: -5px -5px 15px 15px #2ec4b6;
+}
 #title {
   font-family: links;
   display: flex;
@@ -37,6 +48,7 @@ body {
 #container div {
   height: 80%;
   margin: 1vw;
+  transition: width 2s linear 1s;
 }
 #container div img {
   border-radius: 20px;
@@ -58,4 +70,48 @@ body {
 
 img:hover {
   box-shadow: 5px 5px #2ec4b6;
+}
+
+#title:hover #overlay {
+  visibility: visible;
+}
+
+@media (max-width: 1500px) {
+  #title {
+    font-size: x-large;
+  }
+}
+@media (max-width: 1300px) {
+  #title {
+    font-size: large;
+  }
+}
+@media (max-width: 1000px) {
+  #title {
+    font-size: small;
+  }
+  #container {
+    display: block;
+    height: 50vh;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  #container div {
+    margin-bottom: 10vh;
+  }
+}
+@media (max-width: 640px) {
+  #title {
+    display: block;
+    height: fit-content;
+    font-size: smaller;
+  }
+  #container {
+    display: block;
+    height: 30vh;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
 }
