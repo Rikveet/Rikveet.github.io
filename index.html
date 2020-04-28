@@ -1,64 +1,70 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <meta http-equiv="X-UA-Compatitble" content="ie=edge"/>
-            <title>Narnia</title>
-            <link rel="stylesheet" href="style.css">
-            <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">   <!--the nav font-->
-            <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet"><!--later font-->
-            <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet"><!--main logo-->
-        </head>
-        <body id="main">
-            <div id="disable1" class="slider"></div>
-            <header>
-                <section>
-                    <div id="disable2" class="home">
-                        <script>
-                            var tras = true;   
-                            check=localStorage.getItem('visited');
-                            console.log(check);
-                            if(check==null){
-                                localStorage.setItem('visited',true);
-                            }else{
-                                var tras = false;   
-                                document.getElementById("disable1").style.display = "none";
-                                document.getElementById("disable2").style.display = "none";
-                            } 
-                                      
-                        </script>
-                        <img src="./website/spawn1.png" alt="spawn"/>
-                        <p class="Headline">Welcome‎‎‎‎‏‏‎‎.‎to.Narnia</p>
-                    </div>
-                    <div class="container">
-                        <div class="box">
-                            <a href="./shops/"><img src="./website/BootyBay2.png"></a><p>Shops</p><!-- bootyBay.html -->
-                            </div>
-                            <div class="box">
-                                <a href="./bosses/"><img src="./website/BossArena.png"></a><p>Bosses</p><!-- Bosses.html -->
-                            </div>
-                            <div class="box">
-                                <a href="./warps/"><img src="./website/warps.png"></a><p>warps</p><!-- Warps.html -->
-                            </div>
-                            <div class="box">
-                                <a href="https://terminalserver.enjin.com/forum/m/37204534/viewthread/27384744-frequently-asked-questions-by-players-new-old"><img src="./website/Jail.png"></a><p>FAQ</p><!-- Rules.html -->
-                            </div>
-                            <div class="box">
-                                <a href="./featured/"><img src="./website/Minite.png"></a><p>Featured Builds</p><!-- Featured.html -->
-                            </div>
-                            <div class="box">
-                                <a href="./info/"><img src="./website/Owner.png"></a><p>Info</p><!-- Info.html -->
-                            </div>
-                        </div>
-                </section>
-            </header>
-            <img class="narniaLogo" src="./website/server-icon.png" alt="Plz insert Logo Sid XD"/>
-            <p class="bottom">narniamc.com<br>
-                IP: 66.70.175.31:25566 </p>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha256-v/YsEqWkVsiNHryCWg+vjC/eDBakMAgOsCJRa0kNPOg=" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha256-ABrLsV2caVEMCBfm3eNhv/CYQG+tGCqzw2f4b/Pag0M=" crossorigin="anonymous"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script src="lol.js"></script>
-        </body>
-    </html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatitble" content="ie=edge" />
+    <link rel="icon" href="./website/server-icon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Narnia</title>
+  </head>
+  <body id="main">
+    <header id="title">
+      <div>
+        narniamc.com
+      </div>
+      <div>Welcome to Narnia Minecraft</div>
+      <div>IP: 66.70.175.31:25566</div>
+    </header>
+    <div id="container">
+      <div>
+        <a href="./shops/"
+          ><img src="./website/BootyBay2.png" />
+          <p>Shops</p></a
+        >
+
+        <!-- bootyBay.html -->
+      </div>
+      <div>
+        <a href="./bosses/"
+          ><img src="./website/BossArena.png" />
+          <p>Bosses</p></a
+        >
+
+        <!-- Bosses.html -->
+      </div>
+      <div>
+        <a href="./warps/"
+          ><img src="./website/warps.png" />
+          <p>warps</p></a
+        >
+        <!-- Warps.html -->
+      </div>
+      <div>
+        <a
+          href="https://terminalserver.enjin.com/forum/m/37204534/viewthread/27384744-frequently-asked-questions-by-players-new-old"
+          ><img src="./website/Jail.png" />
+          <p>FAQ</p></a
+        >
+
+        <!-- Rules.html -->
+      </div>
+      <div>
+        <a href="./featured/"
+          ><img src="./website/Minite.png" />
+          <p>Featured Builds</p></a
+        >
+
+        <!-- Featured.html -->
+      </div>
+      <div>
+        <a href="./info/"
+          ><img src="./website/Owner.png" />
+          <p>Info</p></a
+        >
+
+        <!-- Info.html -->
+      </div>
+    </div>
+  </body>
+</html>
