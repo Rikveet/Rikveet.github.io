@@ -8,10 +8,13 @@
 }
 
 body {
+  transition: all 1s ease;
   background-color: #011627;
 }
 #overlay {
+  transition: opacity ease-out;
   visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 10vh;
 }
@@ -19,9 +22,10 @@ body {
   height: 80vh;
   width: 60vw;
   border-radius: 20%;
-  box-shadow: -5px -5px 15px 15px #2ec4b6;
+  box-shadow: -5px -5px 20px 20px #2ec4b6;
 }
 #title {
+  cursor: pointer;
   font-family: links;
   display: flex;
   justify-content: space-evenly;
@@ -48,7 +52,6 @@ body {
 #container div {
   height: 80%;
   margin: 1vw;
-  transition: width 2s linear 1s;
 }
 #container div img {
   border-radius: 20px;
@@ -56,6 +59,7 @@ body {
   width: 100%;
   object-fit: cover;
   display: block;
+  transition: all 0.5s ease-out;
 }
 #container div a {
   font-family: emphasis;
@@ -63,6 +67,7 @@ body {
   text-align: center;
   color: #20a4f3;
   text-decoration: none;
+  transition: all 0.5s ease-out;
 }
 #container div :hover {
   color: white;
@@ -73,7 +78,10 @@ img:hover {
 }
 
 #title:hover #overlay {
+  transition-delay: 3s;
+  transition-duration: 1s;
   visibility: visible;
+  opacity: 1;
 }
 
 @media (max-width: 1500px) {
