@@ -115,11 +115,13 @@ $(document).ready(function () {
   elements.forEach((element) => {
     $(element).hover(
       function () {
-        console.log();
+        console.log(element.children[2]);
         $(element.children[0]).css("box-shadow", "0px 6px #4357ad");
+        $(element.children[2]).css("color", "#4357ad");
       },
       function () {
         $(element.children[0]).css("box-shadow", "none");
+        $(element.children[2]).css("color", "black");
       }
     );
   });
