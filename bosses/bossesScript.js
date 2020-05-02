@@ -126,8 +126,13 @@ function animation() {
         }
       );
       $(element).click(function () {
-        $(element).css({ height: "80vh", width: "80vw", "z-index": "2" });
-        $(element.children[1]).css("visibility", "visible");
+        $(element.children[1]).css({
+          height: "80vh",
+          width: "80%",
+          "margin-left": "10%",
+          "z-index": "2",
+          visibility: "visible",
+        });
       });
     }
   });
