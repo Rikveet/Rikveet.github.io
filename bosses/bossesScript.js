@@ -127,9 +127,8 @@ function animation() {
       );
       $(element).click(function () {
         $(element.children[1]).css({
-          height: "80vh",
+          height: "60vh",
           width: "80%",
-          "margin-left": "10%",
           "z-index": "2",
           visibility: "visible",
         });
