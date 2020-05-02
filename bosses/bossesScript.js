@@ -116,7 +116,7 @@ function animation() {
       const element = elements[index];
       $(element).hover(
         function () {
-          console.log(element.children[2]);
+          console.log(element.children[1]);
           $(element.children[0]).css("box-shadow", "0px 6px #4357ad");
           $(element.children[2]).css("color", "#4357ad");
         },
@@ -125,6 +125,9 @@ function animation() {
           $(element.children[2]).css("color", "black");
         }
       );
+      $(element).click(function () {
+        $(element.children[1]).css("visibility", "visible");
+      });
     }
   });
 }
