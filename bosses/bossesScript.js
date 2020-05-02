@@ -108,26 +108,29 @@ for (i = 1; i < BossArenaImageNames.length; i++) {
 images +=
   "<div class='advt'><div class='TierI'>Pending Data</div></div><div class='advt'><div class='TierII'>Pending Data</div></div><div class='advt'><div class='TierIII'>Pending Data</div></div><div class='advt'><div class='TierIV'>Pending Data</div></div><div class='advt'><div class='TierV'>Pending Data</div></div>";
 images += "</div>";
+function animation() {
+  $(document).ready(function () {
+    elements = document.getElementsByClassName("border");
+    console.log(elements.length);
+    for (let index = 0; index < elements.length; index++) {
+      const element = elements[index];
+      $(element).hover(
+        function () {
+          console.log(element.children[2]);
+          $(element.children[0]).css("box-shadow", "0px 6px #4357ad");
+          $(element.children[2]).css("color", "#4357ad");
+        },
+        function () {
+          $(element.children[0]).css("box-shadow", "none");
+          $(element.children[2]).css("color", "black");
+        }
+      );
+    }
+  });
+}
+
 function load() {
   console.log(images);
   document.getElementById("gallery").innerHTML = images;
+  animation();
 }
-
-$(document).ready(function () {
-  elements = document.getElementsByClassName("border");
-  console.log(elements.length);
-  for (let index = 0; index < elements.length; index++) {
-    const element = elements[index];
-    $(element).hover(
-      function () {
-        console.log(element.children[2]);
-        $(element.children[0]).css("box-shadow", "0px 6px #4357ad");
-        $(element.children[2]).css("color", "#4357ad");
-      },
-      function () {
-        $(element.children[0]).css("box-shadow", "none");
-        $(element.children[2]).css("color", "black");
-      }
-    );
-  }
-});
