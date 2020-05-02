@@ -94,25 +94,27 @@ BossArenaImageNames = [];
 BossArenaDataArr.forEach((element) => {
   BossArenaImageNames.push(element.split("\n")[0]);
 });
-var images = "<div id='BossArena'>";
+var images = "<div class='BossArena'>";
 for (i = 1; i < BossArenaImageNames.length; i++) {
   images +=
-    "<div id='advt'><div id='border'><img src='./BossArena/" +
+    "<div class='advt'><div class='border'><img src='./BossArena/" +
     BossArenaImageNames[i] +
-    ".png'><div id='back'><div id='content'>" +
+    ".png'><div class='back'><div id='content'>" +
     BossArenaDataArr[i] +
-    "</div></div><div id='title'>" +
+    "</div></div><div class='title'>" +
     BossArenaImageNames[i] +
     "</div></div></div>";
 }
 images +=
-  "<div id='advt'><div id='TierI'>Pending Data</div></div><div id='advt'><div id='TierII'>Pending Data</div></div><div id='advt'><div id='TierIII'>Pending Data</div></div><div id='advt'><div id='TierIV'>Pending Data</div></div><div id='advt'><div id='TierV'>Pending Data</div></div>";
+  "<div class='advt'><div class='TierI'>Pending Data</div></div><div class='advt'><div class='TierII'>Pending Data</div></div><div class='advt'><div class='TierIII'>Pending Data</div></div><div class='advt'><div class='TierIV'>Pending Data</div></div><div class='advt'><div class='TierV'>Pending Data</div></div>";
 images += "</div>";
 document.getElementById("gallery").innerHTML = images;
 
 $(document).ready(function () {
-  elements = document.querySelectorAll("[id=border]");
-  elements.forEach((element) => {
+  elements = document.getElementsByClassName("border");
+  console.log(elements.length);
+  for (let index = 0; index < elements.length; index++) {
+    const element = elements[index];
     $(element).hover(
       function () {
         console.log(element.children[2]);
@@ -124,5 +126,5 @@ $(document).ready(function () {
         $(element.children[2]).css("color", "black");
       }
     );
-  });
+  }
 });
