@@ -94,7 +94,7 @@ BossArenaImageNames = [];
 BossArenaDataArr.forEach((element) => {
   BossArenaImageNames.push(element.split("\n")[0]);
 });
-var images = "<div class='BossArena'>";
+var images = "<div id='BossArena'>";
 for (i = 1; i < BossArenaImageNames.length; i++) {
   images +=
     "<div class='advt'><div class='border'><img src='./BossArena/" +
