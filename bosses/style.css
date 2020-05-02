@@ -13,22 +13,24 @@ body {
   background-color: #f6f7eb;
 }
 #navbar {
-  border-radius: 10px;
   position: sticky;
-  background-color: #330036;
-  height: 10vh;
-  min-height: fit-content;
+  height: fit-content;
   top: 0;
   z-index: 2;
 }
 #navbar ul {
-  display: flex;
+  float: left;
   justify-content: space-evenly;
-  width: 100%;
+  border-radius: 10px;
+  width: 55vw;
   box-sizing: border-box;
+  background-color: #330036;
+  text-align: center;
+  margin-left: 15vw;
 }
 #navbar ul li {
-  display: block;
+  display: inline-block;
+  padding: 20px;
   font-family: links;
   font-size: x-large;
 }
