@@ -99,7 +99,7 @@ for (i = 1; i < BossArenaImageNames.length; i++) {
   images +=
     "<div class='advt'><div class='border'><img src='./BossArena/" +
     BossArenaImageNames[i] +
-    ".png'><div class='back'><div id='content'>" +
+    ".jpg'><div class='back'><div id='content'>" +
     BossArenaDataArr[i] +
     "</div></div><div class='title'>" +
     BossArenaImageNames[i] +
@@ -108,7 +108,9 @@ for (i = 1; i < BossArenaImageNames.length; i++) {
 images +=
   "<div class='advt'><div class='TierI'>Pending Data</div></div><div class='advt'><div class='TierII'>Pending Data</div></div><div class='advt'><div class='TierIII'>Pending Data</div></div><div class='advt'><div class='TierIV'>Pending Data</div></div><div class='advt'><div class='TierV'>Pending Data</div></div>";
 images += "</div>";
-document.onload((document.getElementById("gallery").innerHTML = images));
+function load() {
+  document.getElementById("gallery").innerHTML = images;
+}
 
 $(document).ready(function () {
   elements = document.getElementsByClassName("border");
