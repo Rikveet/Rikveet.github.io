@@ -1,3 +1,29 @@
-body {
-    background-image: url("images/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
+body{
+    background: dimgrey;
+}
+#heading {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    text-align: center;
+    padding-top: 2vh;
+    color: aliceblue;
+    height: 10vh;
+    background-position: -50vh;
+    background-size: cover;
+    background-image:url("images/markus-spiske-qjnAnF0jIGk-unsplash.jpg");
+    z-index: -1;
+}
+#heading h1{
+    z-index: 1;
+}
+#overlay{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
 }
