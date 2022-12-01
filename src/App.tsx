@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes} from "react-router-dom";
+import Home from "./routes/Home/Home";
+import Login from "./routes/Login/Login";
+import SignUp from "./routes/SignUp/SignUp";
+import UserPage from "./routes/UserPage/UserPage";
+import UserDisplay from "./routes/UserDisplay/UserDisplay";
+import Portfolios from "./routes/Portfolios/Portfolios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Routes>
+                <Route path={''} element={<Home/>}/>
+                <Route path={'login'} element={<Login/>}/>
+                <Route path={'signup'} element={<SignUp/>}/>
+                <Route path={'user'} element={<UserPage/>}/>
+                <Route path={'portfolios'} element={<Portfolios/>}/>
+                <Route path={'portfolios/:id'} element={<UserDisplay/>}/>
+            </Routes>
+        </div>
+
+
+    );
 }
 
 export default App;

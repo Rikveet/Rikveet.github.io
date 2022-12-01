@@ -1,0 +1,109 @@
+@import "public/Globals"
+
+form
+  display: flex
+  position: relative
+  flex-direction: column
+  height: $form-height
+  min-height: fit-content
+  width: $form-width
+  justify-content: space-around
+  align-items: center
+  border: 4px solid white
+  padding: 0 20px 20px
+  border-radius: 20px
+  background: transparent
+  backdrop-filter: blur(10px)
+  color: white
+  gap: 20px
+  @media only screen and (max-width: $tablet)
+    width: 60vw
+    height: 100%
+    padding: 0 10px 20px
+  @media only screen and (max-width: $mobile)
+    width: 60vw
+    height: 100%
+
+  .backgroundDrop
+    background: #00263e
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: -1
+    bottom: 0
+    left: 0
+    border-radius: 15px
+    opacity: 50%
+
+  .heading
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    text-transform: uppercase
+    font-size: 2rem
+    gap: 10px
+    padding-top: 10px
+    .navOptions
+      display: flex
+      flex-direction: row
+      width: 100%
+      justify-content: space-evenly
+      position: relative
+      button
+        min-height: 50px
+        min-width: fit-content
+        width: 40%
+        color: white
+      .headingBottomBorder
+        position: absolute
+        bottom: -7px
+        width: 100%
+        height: 2px
+        background: white
+        border-radius: 10px
+  .formInputContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    height: fit-content
+    gap: 40px
+    @media only screen and (max-width: $tablet)
+      gap: 30px
+
+  .submit
+    height: 50px
+    width: 200px
+    background: black
+    border: 3px solid white
+    border-radius: 20px
+    color: white
+    cursor: pointer
+    transition: all ease-in-out 200ms
+    text-transform: uppercase
+    font-family: buttonFont, sans-serif
+    font-size: x-large
+    @media only screen and (max-width: $tablet)
+      font-size: medium
+      height: 40px
+      width: 150px
+
+    &:hover
+      box-shadow: $shadow
+      scale: 80%
+
+  .submitError
+    position: absolute
+    bottom: 0
+    text-align: center
+    color: white
+    width: 100%
+    height: fit-content
+    font-size: x-large
+    padding-bottom: 10px
+    @media only screen and (max-width: $tablet)
+      font-size: small
+      padding-bottom: 5px
+

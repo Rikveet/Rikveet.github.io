@@ -1,0 +1,48 @@
+.emailVerifyContainer
+  display: flex
+  height: 100vh
+  width: 100vw
+  justify-content: center
+  align-items: center
+  .emailVerify
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 20px
+    border: 3px solid white
+    padding: 20px
+    position: relative
+    z-index: 1
+    border-radius: 20px
+
+    .emailVerifyContainerBackground
+      position: absolute
+      height: 100%
+      width: 100%
+      background: black
+      opacity: 50%
+      z-index: -1
+      border-radius: 15px
+
+    .heading
+      font-family: sans-serif
+      color: white
+      font-size: xx-large
+      text-transform: uppercase
+      text-align: center
+
+    .message
+      font-family: "Roboto Light", sans-serif
+      font-size: large
+      color: white
+
+    .buttonContainer
+      margin: 0 35%
+
+      button
+        margin-top: 10px
+
+    .error
+      color: #ff0000
+      text-transform: uppercase

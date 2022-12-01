@@ -1,0 +1,235 @@
+@import "public/Globals"
+
+.project
+  @extend .frosted
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 10px
+  padding: 20px
+  min-height: fit-content
+  border: 3px solid white
+  width: 80%
+  border-radius: 20px
+  justify-content: space-evenly
+  margin: 20px 0
+
+  .projectHeading
+    position: absolute
+    top: 0
+    left: 15px
+    transform: translateY(-50%)
+    background: white
+    border-radius: 10px
+    text-align: center
+    padding: 5px 0
+    color: black
+    text-transform: capitalize
+    border: black solid 3px
+  .projectInfo
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    gap: 10px
+    .imageNInputContainer
+      display: flex
+      flex-direction: row
+      width: 100%
+      justify-content: flex-start
+      .imageContainer
+        display: flex
+        position: relative
+        width: 60%
+        height: auto
+        min-height: auto
+        border: 3px solid white
+        border-radius: 10px
+        aspect-ratio:  calc(16/9)
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        .currentImage
+          width: 100%
+          height: 100%
+          img
+            position: absolute
+            left: 0
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+        .imageScroll
+          @extend .frosted
+          position: absolute
+          bottom: 0
+          width: 100%
+          display: flex
+          flex-direction: row
+          height: fit-content
+          max-height: 40%
+          border-top: 5px solid white
+          border-radius: 0
+          overflow-x: auto
+          overflow-y: hidden
+          gap: 5px
+          transition: all 500ms ease-in-out
+          &::-webkit-scrollbar
+            height: 10px
+          @extend .customScrollBar
+
+          .image
+            aspect-ratio: 1
+            display: flex
+            height: 80px
+            width: fit-content
+            justify-content: center
+            align-items: center
+            position: relative
+            .swapIcon
+              position: absolute
+              height: auto
+              width: 15px
+              padding: 5px
+              aspect-ratio: 1
+              background: white
+              border-radius: 100%
+              z-index: 2
+              right: 0
+              top: 0
+              bottom: 0
+              margin: auto
+              transform: translateX(50%)
+              transition: all 200ms ease-in-out
+              @media (hover: hover) and (pointer: fine)
+                &:hover
+                  width: 25px
+
+            img
+              height: 100%
+              width: auto
+              aspect-ratio: 1
+              object-fit: cover
+              border: 2px solid black
+              @media (hover: hover) and (pointer: fine)
+                &:hover
+                  border-color: white
+        .imageEdit
+          position: absolute
+          right: 5px
+          bottom: 5px
+          background: black
+          color: white
+          aspect-ratio: 1
+          height: 10%
+          width: auto
+          border-radius: 100%
+          padding: 4px
+          cursor: pointer
+          transition: all 200ms ease-in-out
+          border: black solid 3px
+          @media (hover: hover) and (pointer: fine)
+            &:hover
+              border: white solid 3px
+        .noImage
+          color: white
+          font-size: xx-large
+          font-family: editableText, sans-serif
+
+      .projectInputs
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        width: 40%
+        gap: 10px
+        .projectInput
+          display: flex
+          flex-direction: column
+          gap: 4px
+          width: 50%
+          justify-content: center
+          align-items: center
+          font-size: x-large
+          color: white
+          label
+            display: flex
+            font-family: monospace
+            text-transform: uppercase
+            justify-content: start
+            align-items: center
+            border-bottom: 2px solid white
+            width: fit-content
+
+          input
+            border: 0
+            border-bottom: 2px solid white
+            padding: 2px
+            transition: all ease-in-out 100ms
+            background: transparent
+            font-size: large
+            color: white
+            width: 100%
+            &::placeholder
+              color: #c0b7ad
+              font-family: editableText, sans-serif
+            &:focus
+              outline: none
+              box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0), 0 10px 13px -7px #000000
+
+  .icons
+    display: flex
+    flex-direction: row
+    position: absolute
+    top: 0
+    right: 0
+    transform: translateY(-50%)
+    gap: 10px
+
+    .icon
+      cursor: pointer
+      background: white
+      height: 40px
+      width: auto
+      aspect-ratio: 1
+      padding: 1px
+      border-radius: 10px
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          background-color: black
+          color: white
+        &:disabled
+          background-color: white
+          color: grey
+
+      svg
+        height: 100%
+        width: 100%
+
+    .save
+      @extend .icon
+
+    .delete
+      @extend .icon
+
+  @media only screen and (max-width: $mobile)
+    .projectInfo
+      .imageNInputContainer
+        flex-direction: column
+        .imageContainer
+          width: 100%
+          position: relative
+
+        .projectInputs
+          flex-direction: row
+          width: 100%
+          .projectInput
+            flex-direction: row
+            label
+              font-size: small
+              border-bottom: 0
+              border-right: 2px solid white
+              padding: 0 3px 0 0
+            input
+              width: 50%

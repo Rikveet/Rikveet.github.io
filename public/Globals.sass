@@ -1,0 +1,151 @@
+$mobile:600px
+$tablet:768px
+$laptop:1024px
+$desktop:1200px
+$shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5)
+
+
+$form-height:500px
+$form-width:400px
+
+@font-face
+  font-family: buttonFont
+  src: url("./fonts/button/StickNoBills-VariableFont_wght.ttf") format('truetype')
+
+@font-face
+  font-family: logoFont
+  src: url("./fonts/logo/Pacifico-Regular.ttf")
+
+@font-face
+  font-family: inputPlaceholder
+  src: url("./fonts/input_placeholder/BebasNeue-Regular.ttf")
+
+@font-face
+  font-family: inputText
+  src: url("./fonts/input_text/SignikaNegative-VariableFont_wght.ttf")
+
+@font-face
+  font-family: monoton
+  src: url("./fonts/monoton/Monoton-Regular.ttf")
+
+@font-face
+  font-family: editableText
+  src: url("./fonts/editable_text/CaveatBrush-Regular.ttf")
+
+.customScrollBar
+  cursor: pointer
+  &::-webkit-scrollbar
+    width: 12px
+  &::-webkit-scrollbar-track
+    background: transparent
+  &::-webkit-scrollbar-thumb
+    background-color: white
+    border-radius: 20px
+  &::-webkit-scrollbar-track-piece:end
+    background: transparent
+    margin-bottom: 10px
+  &::-webkit-scrollbar-track-piece:start
+    background: transparent
+    margin-top: 10px
+  @media only screen and (max-width: $tablet)
+    &::-webkit-scrollbar
+      width: 6px
+    &::-webkit-scrollbar-thumb
+      border-radius: 5px
+
+.frosted
+  background: rgba(0, 0, 0, 0.33)
+  border-radius: 16px
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+  backdrop-filter: blur(7.8px)
+  -webkit-backdrop-filter: blur(7.8px)
+
+.loading
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  display: flex
+  width: 3.5em
+  height: 3.5em
+  border: 3px solid transparent
+  border-top-color: #3cefff
+  border-bottom-color: #3cefff
+  border-radius: 50%
+  animation: spin 1.5s linear infinite
+
+  &:before
+    content: ''
+    display: block
+    margin: auto
+    width: 0.75em
+    height: 0.75em
+    border: 3px solid #3cefff
+    border-radius: 50%
+    animation: pulse 1s alternate ease-in-out infinite
+
+
+  @keyframes spin
+    to
+      transform: rotate(360deg)
+
+  @keyframes pulse
+    from
+     transform: scale(0.5)
+    to
+      transform: scale(1)
+
+.description
+  color: white
+  height: fit-content
+  .ql-toolbar
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    background: white
+    border-radius: 10px 10px 0 0
+    .ql-formats
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      margin: 0
+      button
+        aspect-ratio: 1
+        width: auto
+        height: 28px
+  .ql-container
+    height: fit-content
+    border-radius: 0 0 10px 10px
+    .ql-editor
+      @extend .customScrollBar
+      height: 200px
+      font-size: medium
+
+
+  @media only screen and (max-width: $laptop)
+    .ql-toolbar
+      .ql-formats
+        button
+          color: white
+
+  @media only screen and (max-width: $tablet)
+    .ql-toolbar
+      .ql-formats
+        button
+          height: 20px
+
+  @media only screen and (max-width: $mobile)
+    .ql-toolbar
+      .ql-formats
+        .ql-header
+          width: 60px
+          font-size: 10px
+        button
+          height: 15px
+    .ql-editor
+      font-size: small

@@ -11,9 +11,16 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@types/react-image-gallery": "^1.2.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "firebase": "^9.13.0",
+    "react-icons": "^4.6.0",
+    "react-image-gallery": "^1.2.11",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "react-youtube-background": "^1.0.0",
+    "sass": "^1.56.0",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
@@ -44,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
     "gh-pages": "^4.0.0"
   }
 }

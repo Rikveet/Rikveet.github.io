@@ -1,0 +1,126 @@
+@import "public/Globals"
+.inputContainer
+  position: relative
+  height: 50px
+  width: 250px
+  @media only screen and (max-width: $tablet)
+    height: 40px
+    width: 150px
+
+  label
+    position: absolute
+    background: white
+    color: black
+    top: 0
+    transform: translateY(-50%)
+    z-index: 2
+    padding: 3px
+    border-radius: 5px
+    font-family: buttonFont, sans-serif
+    @media only screen and (max-width: $tablet)
+      font-size: x-small
+
+  .input
+    position: absolute
+    height: 100%
+    width: 100%
+    background: transparent
+    right: 0
+    border: 1px solid white
+    border-radius: 10px
+    color: #00ffd9
+    text-align: center
+    font-size: large
+    @media only screen and (max-width: $tablet)
+      font-size: small
+
+    &::placeholder
+      color: white
+      text-transform: uppercase
+      font-family: inputPlaceholder, serif
+      font-weight: lighter
+
+    &:focus
+      box-shadow: $shadow
+      border: 2px solid white
+      outline: none
+
+  .reveal
+    position: absolute
+    right: 0
+    bottom: 0
+    background: black
+    padding: 2px
+    width: 20px
+    height: 20px
+    border-radius: 100%
+    transform: translate(50%, -60%)
+    cursor: pointer
+    @media only screen and (max-width: $tablet)
+      width: 10px
+      height: 10px
+
+  .errorLabel
+    position: absolute
+    bottom: 0
+    background: white
+    font-family: buttonFont, sans-serif
+    color: red
+    padding: 3px
+    border-radius: 5px
+    font-size: small
+    transform: translateY(70%)
+    @media only screen and (max-width: $tablet)
+      font-size: x-small
+
+    .errorRevealIcon
+      cursor: pointer
+
+  .errorsContainer
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    height: fit-content
+    max-height: calc(100vh / 2)
+    width: fit-content
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: transparent
+    z-index: 10
+    border-radius: 20px
+    margin: auto
+
+    .errorsContainerBackground
+      position: absolute
+      height: 100%
+      width: 100%
+      border-radius: 20px
+      background: #262121
+      opacity: 0.9
+      z-index: -1
+
+
+    .errors
+      width: 100%
+      height: 100%
+      overflow-y: auto
+      padding: 10px 10px
+      @extend .customScrollBar
+
+      div
+        padding: 5px 15px
+
+    .close
+      position: absolute
+      height: 20px
+      width: 20px
+      top: 0
+      right: 0
+      transform: translate(-20%, 30%)
+      cursor: pointer
+
+

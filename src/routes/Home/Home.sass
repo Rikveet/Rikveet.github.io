@@ -1,0 +1,83 @@
+@import "public/Globals"
+.homePageOptionsContainer
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  width: 100vw
+  #cardContainer
+    @extend .frosted
+    position: absolute
+    display: flex
+    height: 70vh
+    aspect-ratio: 1
+    width: auto
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    color: white
+    transition: all ease-in-out 600ms
+    margin: auto
+    flex-direction: column
+    border-radius: 100%
+    padding: 50px
+    overflow: hidden
+    #card
+      margin: auto
+      #heading
+        font-family: monoton,sans-serif
+        font-size: 2.5rem
+        span
+          transition: all ease-in-out 500ms
+          cursor: default
+          &:hover
+            color: hsl(189, 99%, 38%)
+      #menu
+        margin-top: 5%
+        display: flex
+        flex-direction: column
+        gap: 20px
+        width: 100%
+        height: 100%
+        justify-content: start
+        align-items: start
+        #btn
+          cursor: pointer
+          display: flex
+          flex-direction: row
+          gap: 20px
+          &:hover
+            #btnIcon
+              background: black
+            div
+              color: black
+              #expansion
+                width: 1000px
+                background: hsl(189, 99%, 38%)
+
+          div
+            font-size: 2rem
+            font-family: buttonFont, sans-serif
+            position: relative
+            display: flex
+            align-items: center
+            #expansion
+              position: absolute
+              height: 100%
+              width: 0
+              left: -10px
+              transition: all ease-in-out 1000ms
+              z-index: -1
+              border-radius: 20px
+          #btnIcon
+            height: 40px
+            width: auto
+            aspect-ratio: 1
+            color: white
+            transition: all ease-in-out 1000ms
+            border-radius: 100%
+            padding: 5px
+
+//@media only screen and (max-width: $tablet)
+//

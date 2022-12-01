@@ -1,0 +1,260 @@
+@import "public/Globals"
+@import "~react-image-gallery/styles/scss/image-gallery.scss"
+
+.userDisplayContainer
+  display: flex
+  width: 100vw
+  max-width: 100vw
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  canvas
+    background-color: black
+  .content
+    display: flex
+    height: 100vh
+    width: 100vw
+    border-radius: 0
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+    gap: 25px
+    .heading
+      @extend .frosted
+      height: 100px
+      width: 80vw
+      padding: 10px 10vw
+      border-radius: 0
+      display: flex
+      flex-direction: row
+      justify-content: space-evenly
+      align-items: center
+      position: fixed
+      top: 0
+      color: white
+      gap: 20px
+      z-index: 10
+      img
+        width: auto
+        height: 100%
+        aspect-ratio: 1
+        object-fit: cover
+      .nav
+        .options
+          svg
+            @media (hover: hover) and (pointer: fine)
+              &:hover
+                background: black
+
+      .userName
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: auto
+        font-size: 5rem
+        font-family: logoFont, sans-serif
+
+      .icons
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 5%
+        svg
+          height: 25px
+          width: auto
+          padding: 5px
+          aspect-ratio: 1
+    .userInfoContainer
+      width: 60vw
+      color: white
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      .userSection
+        @extend .frosted
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        height: fit-content
+        width: auto
+      .desc
+        @extend .description
+        .ql-container
+          .ql-editor
+            height: fit-content
+            max-height: 300px
+            cursor: default
+          .ql-tooltip
+            display: none
+
+      .userDescription
+        @extend .userSection
+        margin-top: 150px
+        padding: 20px
+        gap: 5px
+        .descHeading
+          font-size: xx-large
+          font-family: monoton,sans-serif
+        .border
+          height: 5px
+          width: 100%
+          background-color: white
+        .descContent
+          font-family: Calibri,sans-serif
+          font-size: large
+          .displayDesc
+           @extend .desc
+
+      .project
+        @extend .userSection
+        position: relative
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        margin-top: 50px
+        width: fit-content
+        min-width: 60vw
+        .images
+          display: flex
+          .image-gallery
+            .image-gallery-content
+              .image-gallery-slide-wrapper
+                .image-gallery-icon
+                  width: auto
+                  height: 50px
+                  aspect-ratio: 1
+                  padding: 0
+                  margin: 10px
+                  display: flex
+                  flex-direction: column
+                  justify-content: center
+                  align-items: center
+                  svg
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    left: 0
+                    margin: auto
+                    aspect-ratio: 1
+                    width: auto
+                    height: 100%
+                .image-gallery-slides
+                  .image-gallery-slide
+                    max-height: 300px
+                    height: auto
+                    img
+                      @extend .frosted
+                      height: auto
+                      width: 100%
+                      max-height: 100%
+                      aspect-ratio:  calc(16/9)
+                      object-fit: scale-down
+        .projectInfo
+          position: absolute
+          display: flex
+          flex-direction: row
+          height: 50px
+          width: fit-content
+          color: black
+          background: white
+          padding: 0 10px
+          top: 0
+          right: 10px
+          transform: translate(0,-70%)
+          border-radius: 10px
+          .projectName
+            font-size: xx-large
+            font-family: buttonFont,sans-serif
+          .link
+            height: 60%
+            aspect-ratio: 1
+            width: auto
+            padding: 3px
+            border-radius: 10%
+            transition: all ease-in-out 600ms
+            @media (hover: hover) and (pointer: fine)
+              &:hover
+                cursor: pointer
+                background: black
+                color: white
+
+        .displayDesc
+          @extend .desc
+          width: 50%
+          height: 100%
+
+
+    .invalid
+      @extend .frosted
+      height: 25%
+      width: 25%
+      padding: 10px
+      min-width: fit-content
+      position: fixed
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      display: flex
+      justify-content: space-around
+      align-items: center
+      flex-direction: column
+      color: white
+      font-size: xx-large
+      text-align: center
+
+  @media only screen and (max-width: $laptop)
+    .content
+      .userInfoContainer
+        .project
+          flex-direction: column
+          .displayDesc
+            width: 100%
+
+  @media only screen and (max-width: $tablet)
+    .content
+      .heading
+        height: 100px
+        width: 100%
+        .userName
+          font-size: 2rem
+        .icons
+          flex-direction: row
+      .userInfoContainer
+        width: 90vw
+        .desc
+          .ql-container
+            .ql-editor
+              max-height: 200px
+        .project
+          .images
+            .image-gallery
+              .image-gallery-content
+                .image-gallery-slide-wrapper
+                  .image-gallery-icon
+                    height: 25px
+
+
+  @media only screen and (max-width: $mobile)
+    .content
+      .heading
+        padding: 0
+      .userInfoContainer
+        .project
+          .projectInfo
+            left: 0
+            right: 0
+            margin: auto
+            .projectName
+              font-size: x-large
+
+          .images
+            width: 100%
+
