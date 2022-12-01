@@ -6,11 +6,13 @@
   align-items: center
   height: 100vh
   width: 100vw
+  box-sizing: border-box
   #cardContainer
     @extend .frosted
     position: absolute
     display: flex
-    height: 70vh
+    height: 70%
+    min-height: 450px
     aspect-ratio: 1
     width: auto
     justify-content: center
@@ -21,13 +23,12 @@
     margin: auto
     flex-direction: column
     border-radius: 100%
-    padding: 50px
     overflow: hidden
     #card
       margin: auto
       #heading
         font-family: monoton,sans-serif
-        font-size: 2.5rem
+        font-size: 2rem
         span
           transition: all ease-in-out 500ms
           cursor: default
@@ -57,7 +58,7 @@
                 background: hsl(189, 99%, 38%)
 
           div
-            font-size: 2rem
+            font-size: 1.5rem
             font-family: buttonFont, sans-serif
             position: relative
             display: flex
@@ -71,7 +72,7 @@
               z-index: -1
               border-radius: 20px
           #btnIcon
-            height: 40px
+            height: 30px
             width: auto
             aspect-ratio: 1
             color: white
@@ -79,5 +80,20 @@
             border-radius: 100%
             padding: 5px
 
-//@media only screen and (max-width: $tablet)
-//
+
+  @media only screen and (max-width: $mobile)
+    #cardContainer
+      height: auto
+      width: 100%
+      aspect-ratio: 1
+      min-height: auto
+      #card
+        #heading
+          font-size: 1.5rem
+        #menu
+          #btn
+            div
+              font-size: 1rem
+            #btnIcon
+              height: 20px
+

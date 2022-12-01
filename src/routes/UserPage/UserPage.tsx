@@ -486,7 +486,7 @@ function UserPage() {
                                         }
                                         setShowUserImageLoader(false)
                                     }}
-                                    currentImages={userInfo && userInfo.imageUrl ? userInfo.imageUrl : undefined}/>
+                                    currentImages={userInfo && userInfo.imageUrl ? userInfo.imageUrl : ''}/>
                             }
                             {
                                 !(auth && auth.currentUser?.emailVerified) ?

@@ -6,9 +6,14 @@ import {CiEraser} from "react-icons/ci";
 import {FaArrowCircleLeft, FaArrowCircleRight} from "react-icons/fa";
 
 async function checkImage(url: string) {
-    const res = await fetch(url);
-    const buff = await res.blob();
-    return buff.type.startsWith('image/')
+    try{
+        const res = await fetch(url);
+        const buff = await res.blob();
+        return buff.type.startsWith('image/')
+    }
+    catch (e) {
+        return false
+    }
 }
 
 const ImageDisplay = (props: { index?: number, url: string, deleteImage: Function, changeImage?: Function, isEdgeLeft?: boolean, isEdgeRight?: boolean }) => {
@@ -41,10 +46,10 @@ const ImageDisplay = (props: { index?: number, url: string, deleteImage: Functio
 }
 
 function ImageLoader(props: {
-    setImage?: { (img: string | undefined): void },
-    setImages?: { (img: string[] | undefined): void },
+    setImage?: { (img: string): void },
+    setImages?: { (img: string[]): void },
     typeImg: 'user' | 'project',
-    currentImages: string[] | string | undefined
+    currentImages: string[] | string
 }) {
     const {setImage, setImages, typeImg, currentImages} = {...props}
     const [fileList, setFileList] = useState<string[] | string>();
