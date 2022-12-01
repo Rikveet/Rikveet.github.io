@@ -43,7 +43,7 @@ function Home() {
                             })}
                         </div>
                         <div id={'menu'}>
-                            <MenuButton Icon={RiFileList3Fill} url={'portfolios'} value={'Browse Portfolio'}/>
+                            <MenuButton Icon={RiFileList3Fill} url={'portfolios'} value={'Browse Portfolios'}/>
                             {getAuth(firebaseApp).currentUser?.uid ?
                                 <>
                                     <MenuButton Icon={RiUserSettingsLine} url={'user'} value={'User Settings'}/>

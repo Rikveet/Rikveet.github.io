@@ -120,7 +120,12 @@ function ImageLoader(props: {
                                 setFileList(tempUrlHolder)
                             } else {
                                 if (!fileList || (fileList && fileList.indexOf(tempUrlHolder) === -1)) {
-                                    setFileList([tempUrlHolder, ...fileList as string[]])
+                                    if(fileList){
+                                        setFileList([tempUrlHolder, ...fileList as string[]])
+                                    }
+                                    else {
+                                        setFileList([tempUrlHolder])
+                                    }
                                 } else {
                                     setTempUrlHolder('');
                                     setError('Url already in the list');
