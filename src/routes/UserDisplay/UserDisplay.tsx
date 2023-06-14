@@ -11,9 +11,7 @@ import {TbSocial} from 'react-icons/tb';
 import {AiFillLinkedin} from "react-icons/ai";
 import {CgHomeAlt} from "react-icons/cg";
 import {openInNewTab} from "../../components/core/helperFunctions";
-import Video from "../../components/core/VedioBackground/Video";
 import ReactQuill from "react-quill";
-import ImageGallery from 'react-image-gallery';
 import Hamburger from "../../components/core/Hamburger/Hamburger";
 import Link from "../../components/core/Link/Link";
 // @ts-ignore
@@ -21,6 +19,7 @@ import BackgroundVideo from "../Backgrounds/preview.mp4";
 import {TiThListOutline} from "react-icons/ti";
 import {IoMdLogIn} from "react-icons/io";
 import {getAuth} from "firebase/auth";
+import {Galleria} from "primereact/galleria";
 
 function UserDisplay() {
     const {id} = useParams();
@@ -69,7 +68,6 @@ function UserDisplay() {
 
     return (
         <div className={'userDisplayContainer'}>
-            <Video source={BackgroundVideo}/>
             <div className={'content'}>
                 {
                     loaded ?
@@ -82,9 +80,9 @@ function UserDisplay() {
                                         {userInfo.displayName || id}
                                     </div>
                                     <Hamburger>
-                                        <Link Icon={FaGithubSquare} link={userInfo.github}/>
-                                        <Link Icon={AiFillLinkedin} link={userInfo.linkedIn}/>
-                                        <Link Icon={TbSocial} link={userInfo.social}/>
+                                        <Link Icon={FaGithubSquare} link={userInfo.github} linkText={'Github'}/>
+                                        <Link Icon={AiFillLinkedin} link={userInfo.linkedIn} linkText={'Linked-In'}/>
+                                        <Link Icon={TbSocial} link={userInfo.social} linkText={'Social'}/>
                                         <CgHomeAlt onClick={() => {
                                             nav('/')
                                         }} style={{cursor: 'pointer'}}/>
@@ -111,7 +109,8 @@ function UserDisplay() {
                                                 </div>
                                                 <div className={'border'}/>
                                                 <div className={'descContent'}>
-                                                    <ReactQuill className={'displayDesc'} readOnly={true} theme={'bubble'}
+                                                    <ReactQuill className={'displayDesc'} readOnly={true}
+                                                                theme={'bubble'}
                                                                 value={userInfo.description}/>
                                                 </div>
                                             </>
@@ -125,20 +124,48 @@ function UserDisplay() {
                                             return (
                                                 <div key={project.projectID} className={'project'}>
                                                     <div className={'images'}>
-                                                        <ImageGallery
-                                                            autoPlay={true}
-                                                            items={
+                                                        <Galleria
+                                                            value={
                                                                 project.images && project.images.length > 0 ?
                                                                     project.images.map((url) => {
                                                                         return ({
-                                                                            original: url,
-                                                                            originalClass: 'image'
+                                                                            src: url,
+                                                                            alt: project.projectName
                                                                         })
                                                                     }) : [{
-                                                                        original: 'https://static.vecteezy.com/system/resources/previews/000/423/006/non_2x/picture-icon-vector-illustration.jpg',
-                                                                        originalClass: 'image'
+                                                                        src: 'https://static.vecteezy.com/system/resources/previews/000/423/006/non_2x/picture-icon-vector-illustration.jpg',
+                                                                        alt: project.projectName
                                                                     }]
-                                                            }/>
+                                                            }
+                                                            style={{
+                                                                height: '270px',
+                                                                width: '270px'
+                                                            }}
+                                                            item={
+                                                                (item) => {
+                                                                    return <div
+                                                                        style={{
+                                                                            height: '270px',
+                                                                            width: '270px',
+                                                                            display: 'block',
+                                                                        }}
+                                                                    >
+                                                                        <img
+                                                                        style={{
+                                                                            height: '100%',
+                                                                            width: '100%',
+                                                                            objectFit: 'contain'
+                                                                        }}
+                                                                        src={item.src}
+                                                                        alt={item.alt}
+                                                                        />
+                                                                    </div>
+                                                                   ;
+                                                                }}
+                                                            circular
+                                                            showItemNavigators
+                                                            transitionInterval={2000}
+                                                            showThumbnails={false}/>
                                                     </div>
 
                                                     <div className={'projectInfo'}>
@@ -156,7 +183,8 @@ function UserDisplay() {
                                                             }}/>
                                                         }
                                                     </div>
-                                                    <ReactQuill className={'displayDesc'} readOnly={true} theme={'bubble'}
+                                                    <ReactQuill className={'displayDesc'} readOnly={true}
+                                                                theme={'bubble'}
                                                                 value={project.projectDesc.length > 0 ? project.projectDesc : 'No Description' +
                                                                     ' provided'}/>
                                                 </div>

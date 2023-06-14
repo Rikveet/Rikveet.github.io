@@ -5,13 +5,10 @@ import {HashRouter} from "react-router-dom";
 import FirebaseContext from "./contexts/FirebaseContext";
 import './index.sass';
 
-declare global {
-    // eslint-disable-next-line no-var
-    var FIREBASE_APPCHECK_DEBUG_TOKEN: boolean | string | undefined;
-}
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
 document.addEventListener("touchstart", function () {
 }, true);
 root.render(

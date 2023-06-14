@@ -15,6 +15,8 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "cors": "^2.8.5",
     "firebase": "^9.13.0",
+    "framer-motion": "^10.12.16",
+    "primereact": "^9.5.0",
     "react-icons": "^4.6.0",
     "react-image-gallery": "^1.2.11",
     "react-quill": "^2.0.0",

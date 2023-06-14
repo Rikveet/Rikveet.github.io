@@ -41,7 +41,7 @@ function Hamburger(props: { children: ReactNode }) {
                             toggled && <AiFillCloseCircle className={'menuToggle'} onClick={() => {
                                 setToggled(false)
                                 unlockScroll()
-                            }} style={toggled ? {display: 'block', height: '30px', aspectRatio: '1', width: 'auto', position: "absolute", top: '20px', right: '20px'} : {}}/>
+                            }} style={toggled ? {display: 'block', position: "absolute", top: '20px', right: '20px'} : {}}/>
                         }
                         {props.children}
                     </>
