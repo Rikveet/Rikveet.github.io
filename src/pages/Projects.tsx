@@ -199,13 +199,15 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                             }
                         }
                     >
-                        <Typography sx={{
-                            fontSize: '12px',
-                            backgroundColor: theme === "dark" ? "black" : "white",
-                            padding: '5px',
-                            borderRadius: '5px',
-                            maxWidth: '140px'
-                        }}>
+                        <Typography
+                            sx={{
+                                backgroundColor: theme === "dark" ? "black" : "white",
+                                padding: '5px',
+                                borderRadius: '5px',
+                                maxWidth: '140px'
+                            }}
+                            variant={'body2'}
+                        >
                             {project.name}
                         </Typography>
                         <DisplaySkills skills={project.skills} maxSize={'160px'}/>
@@ -213,7 +215,7 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                             <div className={styles.Link}>
                                 <GitHub/>
                                 <Link className={styles.LinkText} href={project.github} target={'_blank'}>
-                                    Github Repo
+                                    <Typography variant={'caption'}>Github Repo</Typography>
                                 </Link>
                             </div>
                             {
@@ -221,7 +223,7 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                     <div className={styles.Link}>
                                         <TravelExplore/>
                                         <Link className={styles.LinkText} href={project.html_url} target={'_blank'}>
-                                            Live Demo
+                                            <Typography variant={'caption'}> Live Demo </Typography>
                                         </Link>
                                     </div>
                                     : null
@@ -244,7 +246,7 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                  style={{
                                      backgroundColor: theme === "dark" ? 'rgba(0,0,0,1)' : "rgba(255,255,255,1)",
                                  }}>
-                                <Typography sx={{fontSize: '10px'}}>
+                                <Typography variant={'caption'}>
                                     {getDateFromSeconds(parseInt(project.created_at))}
                                 </Typography>
                                 <div className={styles.DescToggleIconContainer}>
@@ -274,14 +276,15 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                             </div>
                             <Typography
                                 sx={{
-                                    fontSize: '8px', padding: "5px 10px 10px 10px",
+                                    padding: "5px 10px 10px 10px",
                                     backgroundColor: theme === "dark" ? 'rgba(0,0,0,0.9)' : "rgba(255,255,255,0.9)",
-                                }}>{project.description}
+                                }}
+                                variant={'caption'}
+                            >{project.description}
                             </Typography>
 
                         </motion.div>
                     </motion.div>
-
 
                 </div>
             </motion.div>
@@ -341,7 +344,8 @@ export function Projects() {
                             <ProjectLoading/>
                             <LoadingText/>
                         </motion.div> :
-                        projects.map((project, index) => <Project {...{skewX, project}} key={`${index} ${project.id}`}/>)
+                        projects.map((project, index) => <Project {...{skewX, project}}
+                                                                  key={`${index} ${project.id}`}/>)
                     }
                 </div>
             </div>

@@ -44,6 +44,7 @@ export function DisplaySkills({skills, maxSize}: { skills: Skill[], maxSize?: st
                             return <Typography
                                 className={styles.Text}
                                 key={index}
+                                variant={'caption'}
                                 sx={{
                                     color: theme === 'light' ? 'rgb(0,0,0)' : 'rgb(255,255,255)',
                                     backgroundColor: theme === 'light' ? 'rgb(255,255,255)' : 'rgb(0,0,0)'

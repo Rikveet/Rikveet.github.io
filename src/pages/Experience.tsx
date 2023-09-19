@@ -113,10 +113,9 @@ function ExperienceItem({experience, pointer, prevPointer, isSelected}: {
                                         style={{
                                             display: "list-item",
                                             listStyleType: 'circle',
-                                            marginLeft: '10px',
                                             lineHeight: '0',
                                         }} key={index}>
-                                        <Typography variant={'caption'} sx={{fontSize: '8px'}}>
+                                        <Typography variant={'caption'}>
                                             {line.trim()}
                                         </Typography>
                                     </motion.li>
