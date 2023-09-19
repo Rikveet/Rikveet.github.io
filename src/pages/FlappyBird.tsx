@@ -24,7 +24,6 @@ import {fall, gameOver, incrementScore, jump, pauseGame, resetGame, startGame} f
 
 function GameBackgroundImageSlider({src, speedS}: { src: string, speedS: number }) {
     const [count, setCount] = useState(0)
-    const gameState = useAppSelector(selectGameStatus);
 
     useInterval(
         () => {
@@ -80,13 +79,6 @@ function GameBackground() {
     )
 }
 
-function GamePauseScreen() {
-    return (
-        <div className={styles.PauseScreen}>
-            <div className={styles.PauseScreenText}>PAUSED</div>
-        </div>
-    )
-}
 
 function GamePipe({validFromTop, id, addAPipe, destroy}: { validFromTop: number, id: string, addAPipe: Function, destroy: Function }) {
     const [pipePosition, setPipePosition] = useState(0)
@@ -187,8 +179,6 @@ function GamePipes() {
     }
 
     const gameState = useAppSelector(selectGameStatus);
-    const gameSpeed = useAppSelector(selectGameSpeed);
-
 
     useEffect(() => {
         if (gameState === 'GAME_OVER')

@@ -1,13 +1,11 @@
 import {useAppDispatch, useAppSelector} from "@/redux/store";
 import {
-    selectEasterEggFound,
     selectInitialRoutePositionOnScreen,
     selectRoute,
-    selectRouteTitle,
-    selectTheme
+    selectRouteTitle
 } from "@/redux/selector";
 import {useEffect, useState} from "react";
-import {Box, Modal, Typography} from "@mui/material";
+import {Modal, Typography} from "@mui/material";
 import {resetRoute} from "@/redux/routeSlice";
 import styles from "@styles/routeDisplay.module.scss";
 import {AiFillCloseCircle} from "react-icons/ai";

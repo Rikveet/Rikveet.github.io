@@ -10,7 +10,7 @@ import {selectEasterEggFound, selectTheme} from "@/redux/selector";
 import {setSnackBar} from "@/redux/snackBarSlice";
 import {AppBox} from "@utils/AppBox";
 import {easterEggFound} from "@/redux/gameSlice";
-import {useScreen, useWindowSize} from "usehooks-ts";
+import {useWindowSize} from "usehooks-ts";
 import React from "react";
 
 const AnimatedMenuItem = ({text, className}: { text: string, className: string }) => {

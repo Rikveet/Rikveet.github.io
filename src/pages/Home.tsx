@@ -9,7 +9,7 @@ import {selectSnackBar} from "@/redux/selector";
 import {useEffect} from "react";
 
 export function Home() {
-    const {enqueueSnackbar, closeSnackbar} = useSnackbar();
+    const {enqueueSnackbar} = useSnackbar();
     const {severity, message, timestamp} = useAppSelector(selectSnackBar);
 
     useEffect(() => {

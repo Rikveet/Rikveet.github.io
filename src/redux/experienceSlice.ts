@@ -15,7 +15,7 @@ const initialState: ExperienceSliceState = {
 
 export const getExperiences = createAsyncThunk(
     "experience/getExperiences",
-    async (_, thunkAPI) => {
+    async () => {
         try{
             const db = getFirestore();
             const projectsCollection = collection(db, "experience");

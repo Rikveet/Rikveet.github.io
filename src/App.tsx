@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 import {Home} from "@/pages/Home";
 import {useAppSelector} from '@/redux/store';
 import {selectTheme} from "@/redux/selector";
-import {createTheme, PaletteOptions, Theme, ThemeOptions, ThemeProvider} from "@mui/material/styles";
+import {createTheme, PaletteOptions, ThemeProvider} from "@mui/material/styles";
 import {SnackbarProvider} from 'notistack';
 
 const getPalette = (theme: string): PaletteOptions => {

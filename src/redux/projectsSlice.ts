@@ -14,7 +14,7 @@ const initialState: ProjectState = {
 
 export const getProjects = createAsyncThunk(
     "projects/getProjects",
-    async (_, thunkAPI) => {
+    async () => {
         const db = getFirestore();
         const projectsCollection = collection(db, "project");
         const projectsSnapshot = await getDocs(projectsCollection);

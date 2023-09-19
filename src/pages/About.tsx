@@ -2,7 +2,6 @@ import {Typography} from "@mui/material";
 import styles from "@styles/about.module.scss";
 import {AppBox} from "@utils/AppBox";
 import {DisplaySkills} from "@components/DisplaySkills";
-import {ReactNode} from "react";
 import {motion} from "framer-motion";
 
 function TypeWriter({text, className}: {

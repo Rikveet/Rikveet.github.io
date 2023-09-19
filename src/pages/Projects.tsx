@@ -8,7 +8,6 @@ import {
     useMotionValue,
     useMotionValueEvent,
     useScroll,
-    useSpring,
     useTransform
 } from "framer-motion";
 import {useAppDispatch, useAppSelector} from "@/redux/store";
@@ -17,12 +16,11 @@ import {getProjects} from "@/redux/projectsSlice";
 import {Link, Typography} from "@mui/material";
 import {TbEye, TbEyeX} from "react-icons/tb";
 import {MdExpandLess} from "react-icons/md";
-import {getIcon} from "@utils/getIcon";
 import {DisplaySkills} from "@components/DisplaySkills";
 import {AiOutlineLeft, AiOutlineRight} from "react-icons/ai";
 import {useInterval} from "usehooks-ts";
 import {getDateFromSeconds} from "@utils/getDateFromSeconds";
-import {GitHub, TravelExplore, Web} from "@mui/icons-material";
+import {GitHub, TravelExplore} from "@mui/icons-material";
 import {ProjectLoading} from "@components/animations/ProjectLoading";
 import {LoadingText} from "@components/LoadingText";
 
@@ -294,12 +292,11 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
 
 export function Projects() {
     const contentScrollRef = useRef(null);
-    const {scrollY, scrollYProgress} = useScroll({container: contentScrollRef});
+    const {scrollY} = useScroll({container: contentScrollRef});
     const y = useMotionValue(0);
     const deltaY = useMotionValue(0);
     const transformedValue = useTransform(deltaY, [-150, 150], [-5, 5])
     const [skewX, setSkewX] = useState(0);
-    const theme = useAppSelector(selectTheme);
 
     useInterval(
         () => {

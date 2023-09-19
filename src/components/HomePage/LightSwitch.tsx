@@ -1,5 +1,5 @@
 import {motion, useMotionValue, useTransform} from "framer-motion";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import styles from "@styles/lightSwitch.module.scss";
 import {useAppDispatch, useAppSelector} from "@reduxStore/store";
 import {toggleTheme} from "@reduxStore/themeSlice";
