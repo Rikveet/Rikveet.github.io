@@ -1,0 +1,183 @@
+.Wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  overflow: hidden;
+
+  .Container {
+    width: 400px;
+    height: 200px;
+    position: relative;
+
+
+    .Timeline {
+      height: 100%;
+      width: 70px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .Bar {
+        width: 3px;
+        height: calc(100% - 60px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+      }
+
+      .Date {
+        position: absolute;
+        height: 30px;
+        width: 100%;
+        padding: 5px;
+        font-size: 10px;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .End {
+        top: 0;
+        left: 0;
+      }
+
+      .Start {
+        bottom: 0;
+        left: 0;
+      }
+
+    }
+
+    .Experience {
+      width: calc(100% - 60px);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      float: right;
+      overflow: hidden;
+      padding: 0 10px 10px 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .Title {
+        font-size: 10px;
+        font-weight: 600;
+        height: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+
+      .SubtitleWrapper {
+        width: 100%;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 5px;
+
+        .Subtitle {
+          font-size: 10px;
+          font-weight: 400;
+          height: 15px;
+        }
+      }
+
+
+
+      .Content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+
+        .Images {
+          width: 100%;
+          height: 100px;
+
+          .Image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+
+        .Description {
+          font-size: 12px;
+          font-weight: 200;
+          height: 100px;
+          overflow-y: auto;
+          white-space: pre-wrap;
+          padding: 5px 10px 5px 10px;
+          border-radius: 5px;
+
+          &::-webkit-scrollbar {
+            width: 0;
+          }
+
+        }
+
+
+      }
+
+
+    }
+  }
+}
+
+
+@media (max-width: 640px) {
+  .Wrapper {
+    .Container {
+      height: 200px;
+      width: 300px;
+
+      .Timeline {
+        transform: translateX(50%);
+
+        .Date {
+          align-items: start;
+        }
+      }
+
+      .Experience {
+        height: 150px;
+        width: 100%;
+        left: 0;
+        top: 24px;
+
+        .LinksWrapper{
+            .Links{
+                height: 280px;
+            }
+        }
+
+        .Content {
+          .Description {
+            height: 80px;
+          }
+        }
+
+      }
+    }
+  }
+}

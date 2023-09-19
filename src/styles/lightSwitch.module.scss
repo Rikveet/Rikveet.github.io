@@ -1,0 +1,42 @@
+.container {
+  width: 50px;
+  height: 125px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  overflow: visible;
+  background: transparent;
+  -webkit-transform-origin: top;
+
+  .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    .icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .bar {
+    top: -398px;
+    position: absolute;
+    height: 500px;
+    width: 2.2px;
+    background-color: black;
+  }
+
+}
+

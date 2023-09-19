@@ -1,0 +1,73 @@
+.Container {
+  width: 300px;
+  height: fit-content;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+
+  .ContactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    .Input {
+      height: 40px;
+    }
+
+    .TextArea {
+      height: 100px;
+    }
+
+    .Button {
+      width: 100px;
+      height: 30px;
+    }
+  }
+
+  .Divider {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .DividerText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 3px;
+      width: fit-content;
+    }
+
+    .DividerLine {
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+
+    }
+  }
+
+  .ContactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: fit-content;
+  }
+}

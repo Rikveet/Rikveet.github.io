@@ -1,0 +1,39 @@
+.Modal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  div {
+    outline: none;
+  }
+
+  .Route {
+    height: fit-content;
+    width: fit-content;
+    max-width: 100vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 10px 5px 10px 5px;
+    border-radius: 10px;
+    position: relative;
+
+    &::-webkit-scrollbar{
+      width: 0px;
+    }
+
+    .CloseButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: auto;
+      aspect-ratio: 1;
+      cursor: pointer;
+      font-size: 20px;
+      color: #333;
+    }
+  }
+}

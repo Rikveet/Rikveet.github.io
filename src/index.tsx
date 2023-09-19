@@ -1,22 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import {HashRouter} from "react-router-dom";
-import FirebaseContext from "./contexts/FirebaseContext";
-import './index.sass';
+import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
+import App from "@/App";
+import {Provider} from "react-redux";
+import store from "@reduxStore/store";
 
-const root = ReactDOM.createRoot(
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+import '@styles/index.css';
+import initializeFirebase from "@utils/initializeFirebase";
+
+
+const root = createRoot(
     document.getElementById('root') as HTMLElement
 );
+
+initializeFirebase();
 
 document.addEventListener("touchstart", function () {
 }, true);
 root.render(
-    <React.StrictMode>
-        <FirebaseContext>
-            <HashRouter>
-                <App/>
-            </HashRouter>
-        </FirebaseContext>
-    </React.StrictMode>
+    <StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </StrictMode>
 );

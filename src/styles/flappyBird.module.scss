@@ -1,0 +1,174 @@
+.Wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 10px;
+
+  .Container {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+
+    .Background {
+      width: 400px;
+      height: 300px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #d2c9a5;
+      overflow-x: hidden;
+      border-radius: 10px;
+
+      .BackgroundImgWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        position: absolute;
+
+        .BackgroundImg {
+          width: 400px;
+          height: 300px;
+          object-fit: cover;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+
+    }
+
+    .GameEngine {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+
+      .Interactive {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: 5;
+      }
+
+      .Bird {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-color: transparent;
+        z-index: 1;
+      }
+
+      .Pipes {
+        width: calc(100% - 10px);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        background-color: transparent;
+        z-index: 2;
+        overflow: hidden;
+
+        .Pipe {
+          width: 50px;
+          height: 100%;
+          top: 0;
+          right: 0;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          overflow: hidden;
+
+          .PipeTop {
+            top: -60%;
+            height: 100%;
+            position: absolute;
+          }
+
+          .Valid{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            background-color: transparent;
+          }
+
+          .PipeBottom {
+            bottom: -60%;
+            height: 100%;
+            position: absolute;
+          }
+        }
+      }
+
+      .Menu{
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: default;
+        .MenuButton{
+            width: calc(100% - 10px);
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            cursor: pointer;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+      }
+    }
+
+
+  }
+}
+
+
+// media queries
+
+@media (max-width: 500px) {
+  .Wrapper{
+    .Container{
+      width: 280px;
+      .Background{
+        width: 280px;
+        .BackgroundImgWrapper{
+          .BackgroundImg{
+            width: 280px;
+          }
+        }
+
+      }
+    }
+  }
+}
