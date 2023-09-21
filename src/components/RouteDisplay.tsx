@@ -100,7 +100,7 @@ export function RouteDisplay() {
                     ease: "easeIn"
                 }}>
                 <AppBox className={`${styles.Route}`}>
-                    <Typography id="modal-modal-title" sx={{position: "relative", marginLeft: "10px"}} variant="h5" component="h5">
+                    <Typography id="modal-modal-title" sx={{position: "relative", marginLeft: "10px"}} variant="h5">
                         {title}
                         <AiFillCloseCircle className={styles.CloseButton} onClick={handleClose}/>
                     </Typography>

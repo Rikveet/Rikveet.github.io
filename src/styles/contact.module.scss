@@ -1,6 +1,9 @@
 .Container {
-  width: 300px;
+  width: 420px;
+  max-width: 95vw;
+  min-height: 400px;
   height: fit-content;
+  max-height: 90vh;
   padding: 15px 20px;
   display: flex;
   flex-direction: column;

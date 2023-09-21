@@ -27,7 +27,6 @@ function FormTextField<T extends ('name' | 'email' | 'message')>(
             variant={'outlined'}
             fullWidth
             required
-            size={'small'}
             sx={{
                 scrollbarWidth: '0px',
             }}
@@ -159,20 +158,16 @@ export function Contact() {
             <div className={styles.Divider}>
                 <span className={`${styles.DividerLine} ${theme === 'light' ? 'bg-black' : 'bg-white'} `}/>
                 <Typography className={`${styles.DividerText} ${theme === 'light' ? 'bg-white' : 'bg-black'}`}
-                            variant={'caption'}>
+                            variant={'body1'}>
                     OR
                 </Typography>
             </div>
             <div className={styles.ContactInfo}>
-                <Link href={
-                    'https://www.linkedin.com/in/rikveet-hayer/'
-                }>
-                    <BsLinkedin className={`text-${theme === 'dark' ? 'white' : 'black'}`} size={'20px'}/>
+                <Link href={'https://www.linkedin.com/in/rikveet-hayer/'}>
+                    <BsLinkedin className={`text-${theme === 'dark' ? 'white' : 'black'}`} size={'30px'}/>
                 </Link>
-                <Link href={
-                    'https://discord.gg/jQWZcMrAWj'
-                }>
-                    <BsDiscord className={`text-${theme === 'dark' ? 'white' : 'black'}`} size={'20px'}/>
+                <Link href={'https://discord.gg/jQWZcMrAWj'}>
+                    <BsDiscord className={`text-${theme === 'dark' ? 'white' : 'black'}`} size={'30px'}/>
                 </Link>
             </div>
         </div>

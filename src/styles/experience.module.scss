@@ -9,10 +9,9 @@
   overflow: hidden;
 
   .Container {
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 350px;
     position: relative;
-
 
     .Timeline {
       height: 100%;
@@ -56,8 +55,8 @@
     }
 
     .Experience {
-      width: calc(100% - 60px);
-      height: 200px;
+      width: calc(100% - 65px);
+      height: fit-content;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -71,7 +70,7 @@
 
       .Title {
         font-weight: 600;
-        height: 20px;
+        height: 40px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -82,22 +81,22 @@
 
       .SubtitleWrapper {
         width: 100%;
-        height: 15px;
+        height: fit-content;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: row;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
 
         .Subtitle {
           font-weight: 400;
-          height: 15px;
+          height: 100%;
         }
       }
 
 
-
       .Content {
+        margin-top: 10px;
         width: 100%;
         height: 100%;
         display: flex;
@@ -106,21 +105,10 @@
         flex-direction: column;
         border-radius: 5px;
 
-        .Images {
-          width: 100%;
-          height: 100px;
-
-          .Image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-          }
-        }
 
         .Description {
           font-weight: 200;
-          height: 100px;
+          height: 200px;
           overflow-y: auto;
           white-space: pre-wrap;
           padding: 5px 10px 5px 10px;
@@ -144,8 +132,8 @@
 @media (max-width: 640px) {
   .Wrapper {
     .Container {
-      height: 200px;
-      width: 300px;
+      height: 385px;
+      width: 90vw;
 
       .Timeline {
         transform: translateX(50%);
@@ -156,20 +144,20 @@
       }
 
       .Experience {
-        height: 150px;
+        height: fit-content;
         width: 100%;
         left: 0;
         top: 24px;
 
-        .LinksWrapper{
-            .Links{
-                height: 280px;
-            }
+        .LinksWrapper {
+          .Links {
+            height: 280px;
+          }
         }
 
         .Content {
           .Description {
-            height: 80px;
+            height: 200px;
           }
         }
 

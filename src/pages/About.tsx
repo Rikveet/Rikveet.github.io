@@ -3,6 +3,7 @@ import styles from "@styles/about.module.scss";
 import {AppBox} from "@utils/AppBox";
 import {DisplaySkills} from "@components/DisplaySkills";
 import {motion} from "framer-motion";
+import {useWindowSize} from "usehooks-ts";
 
 function TypeWriter({text, className}: {
     text: string,
@@ -18,7 +19,7 @@ function TypeWriter({text, className}: {
                 text.split('').map((char, index) => {
                     return (
                         <motion.div variants={textVariant} key={index} transition={{duration: 0.1}}>
-                            <Typography variant={'h6'}>
+                            <Typography variant={'body1'}>
                                 {char}
                                 {
                                     char === ' ' ?
@@ -47,32 +48,28 @@ const info: {
         content: [
             {
                 text: "Bachelor of Computer Science (Honours)",
-                caption: "Sep 2018 - Sep 2022"
             }, {
-                text: "\tMinor in Mathematics",
-                caption: "Brock University"
+                caption: "\tMinor in Mathematics",
             }, {
-                text: " \tConcentration in Artificial Intelligence"
-            }]
+                caption: " \tConcentration in Artificial  " +
+                    "Intelligence"
+            },
+            {
+                caption: "\tBrock University, Sep 2018 - Sep 2022",
+            }
+        ]
     },
     {
         title: "Awards and Achievements",
         content: [
             {
-                text: "Dean's Honour List",
-                caption: "Year 1-4"
+                text: "Dean's Honour List : Year 1-4"
             }, {
                 text: "GPA: 3.8 / 4.0"
             }, {
                 text: "Research Paper",
-                caption: "Sep 2022"
             }, {
-                caption: "\tMCPSO and DCPSO"
-            }, {
-                caption: "\tWith Factorized Node and Layer Decomposition"
-            },
-            {
-                caption: "\tFor Large Scale Neural Networks",
+                caption: "\tMCPSO and DCPSO With Factorized Node and Layer Decomposition For Large Scale Neural Networks"
             }
         ]
     },
@@ -80,8 +77,7 @@ const info: {
         title: "Extracurricular Activities",
         content: [
             {
-                text: "Executive",
-                caption: "Feb 2020 - Sep 2022"
+                text: "Executive"
             }, {
                 caption: "\tWeb developer"
             },
@@ -92,13 +88,11 @@ const info: {
                 caption: "\tWorkshop Coordinator"
             },
             {
-                caption: "\tBrock University Computer Science Club"
+                caption: "\tBrock University Computer Science Club, Feb 2020 - Sep 2022"
             }, {
-                text: "Orientation week volunteer",
-                caption: "Sep 2019, Jan 2020"
+                text: "Orientation week volunteer, Sep 2019 & Jan 2020"
             }, {
-                text: "International Collegiate Programming Competition",
-                caption: "2021, 2022"
+                caption: "ICPC,  2021 & 2022"
             }]
     },
     {
@@ -134,6 +128,7 @@ export function About() {
             }
         }
     }
+    const {width} = useWindowSize();
     return (
         <AppBox className={styles.Wrapper}>
             <motion.div
@@ -164,7 +159,7 @@ export function About() {
                                                 <div className={styles.SectionText} key={_index}>
                                                     {
                                                         icons !== undefined ?
-                                                            <DisplaySkills skills={icons}/>
+                                                            <DisplaySkills skills={icons} maxSize={width < 500 ? `${width - 100}px` : '460px'}/>
                                                             : null
                                                     }
                                                     {
@@ -191,16 +186,6 @@ export function About() {
                     })
                 }
             </motion.div>
-            {/*<Section>*/}
-            {/*    <Title title={"IDEs and Tools"}/>*/}
-            {/*    <Content>*/}
-            {/*        <Text>*/}
-            {/*            <DisplaySkills*/}
-            {/*                skills={["IDEA", "VS_CODE", "VISUAL_STUDIO", "GIT", "GITHUB", "GITHUB_ACTIONS", "FIGMA",*/}
-            {/*                    "PHOTOSHOP", "BLENDER", "AFTER_EFFECTS", "RASPBERRY_PI", "LATEX", "DOCKER"]}/>*/}
-            {/*        </Text>*/}
-            {/*    </Content>*/}
-            {/*</Section>*/}
         </AppBox>
     )
 }

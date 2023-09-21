@@ -18,7 +18,7 @@ import {TbEye, TbEyeX} from "react-icons/tb";
 import {MdExpandLess} from "react-icons/md";
 import {DisplaySkills} from "@components/DisplaySkills";
 import {AiOutlineLeft, AiOutlineRight} from "react-icons/ai";
-import {useInterval} from "usehooks-ts";
+import {useInterval, useWindowSize} from "usehooks-ts";
 import {getDateFromSeconds} from "@utils/getDateFromSeconds";
 import {GitHub, TravelExplore} from "@mui/icons-material";
 import {ProjectLoading} from "@components/animations/ProjectLoading";
@@ -141,10 +141,10 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
     const [descriptionVisible, setDescriptionVisible] = useState(false);
     const [hideContent, setHideContent] = useState(false);
     const theme = useAppSelector(selectTheme);
+    const {width} = useWindowSize();
     return (
         <div className={styles.Project}>
             <motion.div className={styles.ProjectContentContainer}
-
                         style={{
                             borderColor: theme === "dark" ? "white" : "black",
                         }}
@@ -204,18 +204,18 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                 backgroundColor: theme === "dark" ? "black" : "white",
                                 padding: '5px',
                                 borderRadius: '5px',
-                                maxWidth: '140px'
+                                maxWidth: width < 400 ? '170px' : '250px'
                             }}
-                            variant={'body2'}
+                            variant={'h6'}
                         >
                             {project.name}
                         </Typography>
-                        <DisplaySkills skills={project.skills} maxSize={'160px'}/>
+                        <DisplaySkills skills={project.skills} maxSize={width < 400 ? '220px' : "315px"}/>
                         <div className={styles.Links}>
                             <div className={styles.Link}>
                                 <GitHub/>
                                 <Link className={styles.LinkText} href={project.github} target={'_blank'}>
-                                    <Typography variant={'caption'}>Github Repo</Typography>
+                                    <Typography variant={'body1'}>Github Repo</Typography>
                                 </Link>
                             </div>
                             {
@@ -223,7 +223,7 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                     <div className={styles.Link}>
                                         <TravelExplore/>
                                         <Link className={styles.LinkText} href={project.html_url} target={'_blank'}>
-                                            <Typography variant={'caption'}> Live Demo </Typography>
+                                            <Typography variant={'body1'}> Live Demo </Typography>
                                         </Link>
                                     </div>
                                     : null
@@ -233,12 +233,12 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                         <motion.div
                             className={styles.Description}
                             initial={{
-                                top: '85%',
+                                top: width > 400 ? '70%' : '85%',
                                 left: 0
                             }}
                             animate={
                                 {
-                                    top: descriptionVisible ? '25%' : '85%',
+                                    top: descriptionVisible ? '25%' : width > 400 ? '70%' : '85%',
                                 }
                             }
                         >
@@ -246,7 +246,7 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                  style={{
                                      backgroundColor: theme === "dark" ? 'rgba(0,0,0,1)' : "rgba(255,255,255,1)",
                                  }}>
-                                <Typography variant={'caption'}>
+                                <Typography variant={'body1'}>
                                     {getDateFromSeconds(parseInt(project.created_at))}
                                 </Typography>
                                 <div className={styles.DescToggleIconContainer}>
@@ -270,7 +270,7 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                             }
                                         }
                                     >
-                                        <MdExpandLess className={'w-[15px] h-[15px] m-0'}/>
+                                        <MdExpandLess className={'w-[20px] h-[20px] m-0'}/>
                                     </motion.div>
                                 </div>
                             </div>
@@ -278,8 +278,13 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                                 sx={{
                                     padding: "5px 10px 10px 10px",
                                     backgroundColor: theme === "dark" ? 'rgba(0,0,0,0.9)' : "rgba(255,255,255,0.9)",
+                                    height: "220px",
+                                    overflowY: "auto",
+                                    "&::-webkit-scrollbar": {
+                                        width: "0px"
+                                    }
                                 }}
-                                variant={'caption'}
+                                variant={'body2'}
                             >{project.description}
                             </Typography>
 

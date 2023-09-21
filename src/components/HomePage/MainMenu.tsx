@@ -13,7 +13,7 @@ import {easterEggFound} from "@/redux/gameSlice";
 import {useWindowSize} from "usehooks-ts";
 import React from "react";
 
-const AnimatedMenuItem = ({text, className}: { text: string, className: string }) => {
+const AnimatedMenuItem = ({text, className, variant}: { text: string, className: string, variant: 'h6' | 'h4' }) => {
     return (
         <>
             {
@@ -45,7 +45,7 @@ const AnimatedMenuItem = ({text, className}: { text: string, className: string }
                                 damping: 10,
                             }}
                         >
-                            <Typography variant={"h5"}>{letter}</Typography>
+                            <Typography variant={variant}>{letter}</Typography>
                         </motion.pre>
                     })}
         </>
@@ -126,11 +126,14 @@ const MainMenuItem = ({text, description, link}: MainMenuItemType) => {
                             key={'description'}
                             className={styles.MainMenuItemDescription}
                             text={description}
+                            variant={'h6'}
                         /> :
                         <AnimatedMenuItem
+                            key={'title'}
                             className={styles.MainMenuItemTitle}
                             text={text}
-                            key={'title'}/>
+                            variant={'h4'}
+                        />
                 }
             </AnimatePresence>
         </motion.div>
@@ -260,9 +263,9 @@ export function MainMenu() {
                         <MainMenuItem {...item}/>
 
                         {
-                            index === Math.floor((MainMenuItems.length -1) / 2) &&
-                            width > 768 ?
-                                <MainMenuItem  description={''} text={""}/> : null
+                            index === Math.floor((MainMenuItems.length - 1) / 2) &&
+                            width > 1000 ?
+                                <MainMenuItem description={''} text={""}/> : null
                         }
                     </Fragment>
                 })}

@@ -38,14 +38,14 @@ function ExperienceItem({experience, pointer, prevPointer, isSelected}: {
             transition={{duration: 0.8, ease: 'linear'}}
         >
             <AppBox className={'w-[100%]'}>
-                <Typography className={styles.Title} variant={"body1"}>
+                <Typography className={styles.Title} variant={"h5"}>
                     {experience.position}
                     {experience.company.logo?.src?.src !== undefined ?
                         <Tooltip
                             title={experience.company.logo.tooltip}
                             arrow
                         >
-                            <img className={'w-[20px] h-[20px] rounded-full'}
+                            <img className={'w-[auto] h-[100%] aspect-square rounded-full'}
                                  src={experience.company.logo.src.src}
                                  alt={experience.company.logo.tooltip}/>
                         </Tooltip>
@@ -111,11 +111,12 @@ function ExperienceItem({experience, pointer, prevPointer, isSelected}: {
                                             }
                                         }
                                         style={{
-                                            display: "list-item",
                                             listStyleType: 'circle',
                                             lineHeight: '0',
+                                            marginLeft: '15px',
+
                                         }} key={index}>
-                                        <Typography variant={'caption'}>
+                                        <Typography variant={'body1'}>
                                             {line.trim()}
                                         </Typography>
                                     </motion.li>

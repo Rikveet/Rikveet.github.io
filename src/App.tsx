@@ -4,6 +4,7 @@ import {useAppSelector} from '@/redux/store';
 import {selectTheme} from "@/redux/selector";
 import {createTheme, PaletteOptions, ThemeProvider} from "@mui/material/styles";
 import {SnackbarProvider} from 'notistack';
+import {responsiveFontSizes} from "@mui/material";
 
 const getPalette = (theme: string): PaletteOptions => {
     const palette: PaletteOptions = theme === 'light' ?
@@ -48,8 +49,7 @@ function App() {
         {
             palette: getPalette(theme),
             typography: {
-                fontFamily: "Merriweather Sans, sans-serif",
-                htmlFontSize: 10,
+                fontFamily: "Roboto Slab, sans-serif",
                 fontWeightLight: 300,
             },
             components: {
@@ -57,30 +57,25 @@ function App() {
                     styleOverrides: {
                         root: {
                             color: theme === 'light' ? '#000000' : '#ffffff',
+                            fontFamily: "Roboto Slab, sans-serif",
+                        },
+                        h1: {
+                            fontFamily: "Playfair Display, sans-serif",
+                        },
+                        h2: {
+                            fontFamily: "Playfair Display, sans-serif",
+                        },
+                        h3: {
+                            fontFamily: "Playfair Display, sans-serif",
+                        },
+                        h4: {
+                            fontFamily: "Playfair Display, sans-serif",
                         },
                         h5: {
-                            fontWeight: '500',
-                            fontSize: '0.95rem',
-                            fontFamily: "Montserrat, sans-serif",
-                            textTransform: 'uppercase',
+                            fontFamily: "Playfair Display, sans-serif",
                         },
                         h6: {
-                            fontWeight: '500',
-                            fontSize: '0.85rem',
-                            fontFamily: "Montserrat, sans-serif",
-                            textTransform: 'uppercase'
-                        },
-                        body1: {
-                            fontWeight: 'lighter',
-                            fontSize: '0.75rem',
-                        },
-                        body2: {
-                            fontWeight: 'lighter',
-                            fontSize: '0.6rem',
-                        },
-                        caption: {
-                            fontWeight: 'lighter',
-                            fontSize: '0.55rem',
+                            fontFamily: "Playfair Display, sans-serif",
                         }
                     }
                 },
@@ -89,7 +84,6 @@ function App() {
                         tooltip: {
                             backgroundColor: theme === 'light' ? '#ffffff' : '#000000',
                             color: theme === 'light' ? '#000000' : '#ffffff',
-                            fontSize: '8px',
                             borderRadius: '4px',
                             padding: '4px',
                             boxShadow: `0 0 4px 0 ${theme === 'light' ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)'}}`,
@@ -110,29 +104,21 @@ function App() {
                 MuiInputBase: {
                     styleOverrides: {
                         root: {
-                            fontFamily: "Merriweather Sans, sans-serif",
-                            fontSize: "10px",
-                            "*":{
-                                "&::-webkit-scrollbar": {
-                                    width: "0px"
-                                }
-                            },
+                            fontFamily: "Playfair Display, sans-serif",
                         }
                     }
                 },
                 MuiInputLabel: {
                     styleOverrides: {
                         root: {
-                            fontFamily: "Merriweather Sans, sans-serif",
-                            fontSize: "12px",
+                            fontFamily: "Playfair Display, sans-serif",
                         }
                     }
                 },
                 MuiFormHelperText: {
                     styleOverrides: {
                         root: {
-                            fontFamily: "Merriweather Sans, sans-serif",
-                            fontSize: "8px",
+                            fontFamily: "Roboto Slab, sans-serif",
                         }
                     }
                 }
@@ -140,8 +126,9 @@ function App() {
             }
         }
     ), [theme]);
+    const responsiveFontTheme = responsiveFontSizes(themeConfig);
     return (
-        <ThemeProvider theme={themeConfig}>
+        <ThemeProvider theme={responsiveFontTheme}>
             <SnackbarProvider maxSnack={5}>
                 <Home/>
             </SnackbarProvider>
