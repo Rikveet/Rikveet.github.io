@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.16cf00e0.css",
-    "main.js": "/static/js/main.07bc0043.js",
+    "main.css": "/static/css/main.90da67a1.css",
+    "main.js": "/static/js/main.6a08ac62.js",
     "static/media/background_day.jpg": "/static/media/background_day.1f1a4da8c756205576e6.jpg",
     "static/media/Plan9-Dark.svg": "/static/media/Plan9-Dark.0ef411ec658467f1ff2af6b83efeda69.svg",
     "static/media/Plan9-Light.svg": "/static/media/Plan9-Light.ce4d798b97a06755e6e687f1e1a4b5b5.svg",
@@ -391,11 +391,11 @@
     "static/media/Framer-Motion.svg": "/static/media/Framer-Motion.cd0e8acf350dd639e9e8c999f8539a5e.svg",
     "static/media/Vercel-Dark.svg": "/static/media/Vercel-Dark.4db075615b38efaa89d75e9aee1248bc.svg",
     "static/media/Vercel-Light.svg": "/static/media/Vercel-Light.20354d0488bbeba7e2b7cd2b22ff8500.svg",
-    "main.16cf00e0.css.map": "/static/css/main.16cf00e0.css.map",
-    "main.07bc0043.js.map": "/static/js/main.07bc0043.js.map"
+    "main.90da67a1.css.map": "/static/css/main.90da67a1.css.map",
+    "main.6a08ac62.js.map": "/static/js/main.6a08ac62.js.map"
   },
   "entrypoints": [
-    "static/css/main.16cf00e0.css",
-    "static/js/main.07bc0043.js"
+    "static/css/main.90da67a1.css",
+    "static/js/main.6a08ac62.js"
   ]
 }
