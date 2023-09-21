@@ -1,14 +1,10 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 
 import {AppBox} from "@utils/AppBox";
 import styles from "@styles/projects.module.scss";
 import {
     AnimatePresence,
     motion,
-    useMotionValue,
-    useMotionValueEvent,
-    useScroll,
-    useTransform
 } from "framer-motion";
 import {useAppDispatch, useAppSelector} from "@/redux/store";
 import {selectProjectFetching, selectProjects, selectTheme} from "@/redux/selector";
@@ -137,7 +133,7 @@ const ProjectImageBackground = ({highlightImg, images}: {
 }
 
 
-const Project = ({project, skewX}: { project: Project, skewX: number }) => {
+const Project = ({project, isOdd}: { project: Project, isOdd: boolean }) => {
     const [descriptionVisible, setDescriptionVisible] = useState(false);
     const [hideContent, setHideContent] = useState(false);
     const theme = useAppSelector(selectTheme);
@@ -148,22 +144,24 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
                         style={{
                             borderColor: theme === "dark" ? "white" : "black",
                         }}
-                        animate={
+                        initial={{
+                            y: isOdd ? '100%' : '-100%',
+                        }}
+                        whileInView={
                             {
-                                skewX: -skewX,
+                                y: 0,
                             }
                         }
                         transition={
                             {
-                                duration: 0.3,
+                                duration: 1.5,
                                 type: "spring",
-                                ease: "linear"
+                                bounce: 0.5,
                             }
                         }>
 
                 <div
                     className={styles.ProjectContent}
-                    style={{}}
                 >
                     <ProjectImageBackground
                         highlightImg={project.highlightImage}
@@ -299,25 +297,6 @@ const Project = ({project, skewX}: { project: Project, skewX: number }) => {
 }
 
 export function Projects() {
-    const contentScrollRef = useRef(null);
-    const {scrollY} = useScroll({container: contentScrollRef});
-    const y = useMotionValue(0);
-    const deltaY = useMotionValue(0);
-    const transformedValue = useTransform(deltaY, [-150, 150], [-5, 5])
-    const [skewX, setSkewX] = useState(0);
-
-    useInterval(
-        () => {
-            const latest = scrollY.get();
-            deltaY.set((latest - y.get()) * 100);
-            y.set(latest);
-        },
-        300,
-    )
-
-    useMotionValueEvent(transformedValue, "change", (latest) => {
-        setSkewX(latest);
-    })
 
     const projects = useAppSelector(selectProjects);
     const isFetching = useAppSelector(selectProjectFetching);
@@ -332,7 +311,7 @@ export function Projects() {
         <AppBox className={styles.Wrapper}>
 
             <div className={styles.Container}>
-                <div ref={contentScrollRef} className={styles.Content}>
+                <div className={styles.Content}>
                     {isFetching ?
                         <motion.div
                             className={'w-[100%] h-[100%] flex justify-center items-center rotate-90 relative'}
@@ -349,7 +328,7 @@ export function Projects() {
                             <ProjectLoading/>
                             <LoadingText/>
                         </motion.div> :
-                        projects.map((project, index) => <Project {...{skewX, project}}
+                        projects.map((project, index) => <Project {...{isOdd: index % 2 == 0, project}}
                                                                   key={`${index} ${project.id}`}/>)
                     }
                 </div>
