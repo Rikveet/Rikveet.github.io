@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.90da67a1.css",
-    "main.js": "/static/js/main.6a08ac62.js",
+    "main.js": "/static/js/main.fb086dc8.js",
     "static/media/background_day.jpg": "/static/media/background_day.1f1a4da8c756205576e6.jpg",
     "static/media/Plan9-Dark.svg": "/static/media/Plan9-Dark.0ef411ec658467f1ff2af6b83efeda69.svg",
     "static/media/Plan9-Light.svg": "/static/media/Plan9-Light.ce4d798b97a06755e6e687f1e1a4b5b5.svg",
@@ -338,6 +338,7 @@
     "static/media/PyTorch-Light.svg": "/static/media/PyTorch-Light.ee37d5e59e9ed88b25a9793705eeeab7.svg",
     "static/media/PyTorch-Dark.svg": "/static/media/PyTorch-Dark.95429a895bc9e4f596d1ddda67eb6cae.svg",
     "static/media/Solidity.svg": "/static/media/Solidity.66be769accc575af72a67664cf221a93.svg",
+    "index.html": "/index.html",
     "static/media/C.svg": "/static/media/C.c626ccb6c2805626752f95c9989dbbb5.svg",
     "static/media/Crystal-Dark.svg": "/static/media/Crystal-Dark.16cd80e0c69c4ace527a01cea342c747.svg",
     "static/media/GTK-Dark.svg": "/static/media/GTK-Dark.5d9fa9726aa6d9fb7b7f876d607f8b2f.svg",
@@ -349,7 +350,6 @@
     "static/media/Prisma.svg": "/static/media/Prisma.aed5845467c41f12d666b450eba2bd2a.svg",
     "static/media/Replit-Dark.svg": "/static/media/Replit-Dark.828a68d4606c5fee595cfeeb994ebde0.svg",
     "static/media/Replit-Light.svg": "/static/media/Replit-Light.24f0922629d7378e552698c2b391c5e3.svg",
-    "index.html": "/index.html",
     "static/media/StackOverflow-Dark.svg": "/static/media/StackOverflow-Dark.06771681526f96c2bfdde1e472606007.svg",
     "static/media/StackOverflow-Light.svg": "/static/media/StackOverflow-Light.39fba1c4650fda16d587df870ca7bb48.svg",
     "static/media/ActivityPub-Dark.svg": "/static/media/ActivityPub-Dark.0e27b5751f29a1c9fa094d4af35f2dbe.svg",
@@ -392,10 +392,10 @@
     "static/media/Vercel-Dark.svg": "/static/media/Vercel-Dark.4db075615b38efaa89d75e9aee1248bc.svg",
     "static/media/Vercel-Light.svg": "/static/media/Vercel-Light.20354d0488bbeba7e2b7cd2b22ff8500.svg",
     "main.90da67a1.css.map": "/static/css/main.90da67a1.css.map",
-    "main.6a08ac62.js.map": "/static/js/main.6a08ac62.js.map"
+    "main.fb086dc8.js.map": "/static/js/main.fb086dc8.js.map"
   },
   "entrypoints": [
     "static/css/main.90da67a1.css",
-    "static/js/main.6a08ac62.js"
+    "static/js/main.fb086dc8.js"
   ]
 }
