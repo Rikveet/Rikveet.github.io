@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+div {
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   margin: 0;

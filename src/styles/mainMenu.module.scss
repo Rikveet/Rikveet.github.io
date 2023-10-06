@@ -28,10 +28,10 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 5;
-
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    -webkit-tap-highlight-color: transparent;
 
     .MainImage {
       object-fit: cover;
